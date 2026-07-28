@@ -2,234 +2,111 @@
   "use strict";
 
   var navLinks = document.querySelectorAll(".nav-link");
-  var archView = document.getElementById("archView");
+  var tileView = document.getElementById("tileView");
   var sectionView = document.getElementById("sectionView");
   var heroSection = document.getElementById("heroSection");
-  var archCanvas = document.getElementById("archCanvas");
-  var archCore = document.getElementById("archCore");
-  var archNodes = document.querySelectorAll(".arch-node");
-  var archLines = document.getElementById("archLines");
+  var tileCanvas = document.getElementById("tileCanvas");
   var logoHome = document.getElementById("logoHome");
   var overlay = document.getElementById("overlay");
 
   var currentSection = null;
-  var archExpanded = false;
-  var archAnimating = false;
+  var tileVisible = false;
 
-  // ========== 架构图：计算节点位置并绘制连接线 ==========
-  function layoutArchNodes() {
-    var w = archCanvas.offsetWidth;
-    var h = archCanvas.offsetHeight;
-    var cx = w / 2;
-    var cy = h / 2;
-    var scale = Math.min(w, h) / 1200; // 自适应缩放
+  // ========== 23 瓦片数据 ==========
+  // x: 0=信息属性(左), 1=数据属性(右)
+  // y: 0=通用基础(上), 1=专用智能(下)
+  // size: sm/md/lg/xl
+  var TILES = [
+    // ── 通用基础 · 信息属性（左上）──
+    { name: "政策洞察", sub: "涟漪分析", link: "http://localhost:18880", color: "cyan", size: "lg", x:0.05,y:0.05 },
+    { name: "技贸措施", sub: "TBT/SPS", link: "http://localhost:5403", color: "cyan", size: "md", x:0.10,y:0.18 },
+    { name: "跨境执法", sub: "GatherInfo", link: "http://localhost:5178", color: "cyan", size: "lg", x:0.12,y:0.35 },
 
-    archNodes.forEach(function (node) {
-      var angle = parseFloat(node.getAttribute("data-angle")) * Math.PI / 180;
-      var dist = parseFloat(node.getAttribute("data-dist")) * scale;
-      var x = cx + Math.cos(angle) * dist;
-      var y = cy + Math.sin(angle) * dist;
-      node.style.left = x + "px";
-      node.style.top = y + "px";
-    });
+    // ── 通用基础 · 数据属性（右上）──
+    { name: "UN Comtrade", sub: "贸易镜像", link: "http://localhost:8150", color: "emerald", size: "lg", x:0.65,y:0.03 },
+    { name: "基础参数", sub: "税则8972条", link: "http://localhost:8780", color: "violet", size: "md", x:0.70,y:0.18 },
+    { name: "法规标准", sub: "3082条", link: "http://localhost:8289", color: "violet", size: "lg", x:0.72,y:0.30 },
+    { name: "管制清单", sub: "486条物项", link: "http://localhost:8600", color: "violet", size: "md", x:0.80,y:0.05 },
+    { name: "价格库", sub: "World Bank", link: "http://localhost:9201", color: "emerald", size: "sm", x:0.82,y:0.38 },
+    { name: "数据汇集", sub: "8源入库", link: "http://localhost:8158", color: "emerald", size: "md", x:0.68,y:0.40 },
+    { name: "历史案件", sub: "LLM抽取", link: "http://localhost:8500", color: "emerald", size: "md", x:0.60,y:0.45 },
 
-    drawArchLines(cx, cy, scale);
-  }
+    // ── 专用智能 · 信息属性（左下）──
+    { name: "部委新政", sub: "政策采集", link: "http://localhost:18880", color: "cyan", size: "sm", x:0.02,y:0.55 },
+    { name: "情报检索", sub: "全文搜索", link: "http://localhost:5178", color: "cyan", size: "md", x:0.08,y:0.62 },
+    { name: "公众号情报", sub: "微信归档", link: "http://localhost:5001", color: "cyan", size: "sm", x:0.04,y:0.75 },
+    { name: "全球政策", sub: "外贸动态", link: "http://localhost:18880", color: "cyan", size: "sm", x:0.12,y:0.80 },
+    { name: "HaiSee转译", sub: "情报→任务书", link: "http://localhost:5400", color: "rose", size: "lg", x:0.18,y:0.55 },
+    { name: "以案找案", sub: "案例比对", link: "http://localhost:8190", color: "rose", size: "lg", x:0.22,y:0.65 },
+    { name: "查验因子", sub: "风险量化", link: "http://localhost:8173", color: "rose", size: "md", x:0.15,y:0.75 },
+    { name: "特征提取", sub: "要素抽取", link: "http://localhost:8173", color: "rose", size: "sm", x:0.10,y:0.88 },
 
-  function drawArchLines(cx, cy, scale) {
-    var svg = archLines;
-    svg.setAttribute("width", archCanvas.offsetWidth);
-    svg.setAttribute("height", archCanvas.offsetHeight);
-    svg.innerHTML = "";
+    // ── 专用智能 · 数据属性（右下）──
+    { name: "关键矿产", sub: "战略管制", link: "http://localhost:8100", color: "amber", size: "lg", x:0.65,y:0.55 },
+    { name: "出口管制", sub: "反制措施", link: "http://localhost:8300", color: "amber", size: "lg", x:0.68,y:0.65 },
+    { name: "两用物项", sub: "51号公告", link: "http://localhost:8200", color: "amber", size: "md", x:0.78,y:0.52 },
+    { name: "化肥贸易", sub: "HS3101-3105", link: "http://localhost:8560", color: "amber", size: "md", x:0.82,y:0.66 },
+    { name: "AIS轨迹", sub: "港新/加勒比", link: "http://localhost:8160", color: "emerald", size: "sm", x:0.60,y:0.78 },
+    { name: "风控知识库", sub: "本地知识库", link: "http://localhost:8788", color: "emerald", size: "md", x:0.70,y:0.22 },
+  ];
 
-    // 绘制中心到各层的连接线
-    var layers = {};
-    archNodes.forEach(function (node) {
-      var layer = node.getAttribute("data-layer");
-      if (!layers[layer]) layers[layer] = [];
-      layers[layer].push(node);
-    });
+  // ========== 生成瓦片图 ==========
+  function renderTiles() {
+    tileCanvas.innerHTML = "";
 
-    // 同层节点之间的弧线
-    Object.keys(layers).forEach(function (layer) {
-      var nodes = layers[layer];
-      var color = getLayerColor(layer);
-      for (var i = 0; i < nodes.length; i++) {
-        for (var j = i + 1; j < nodes.length; j++) {
-          var a = nodes[i], b = nodes[j];
-          var ax = parseFloat(a.style.left), ay = parseFloat(a.style.top);
-          var bx = parseFloat(b.style.left), by = parseFloat(b.style.top);
-          var midX = (ax + bx) / 2, midY = (ay + by) / 2;
-          // 向中心偏移的控制点
-          var ctrlX = midX + (cx - midX) * 0.25;
-          var ctrlY = midY + (cy - midY) * 0.25;
-          var path = document.createElementNS("http://www.w3.org/2000/svg", "path");
-          path.setAttribute("d", "M" + ax + "," + ay + " Q" + ctrlX + "," + ctrlY + " " + bx + "," + by);
-          path.setAttribute("fill", "none");
-          path.setAttribute("stroke", color);
-          path.setAttribute("stroke-width", "1");
-          path.setAttribute("opacity", "0.35");
-          path.setAttribute("class", "arch-line");
-          svg.appendChild(path);
-        }
-      }
-    });
+    TILES.forEach(function (t, i) {
+      var tile = document.createElement("a");
+      tile.href = t.link;
+      tile.target = "_blank";
+      tile.rel = "noopener";
+      tile.className = "tile " + t.color + " tile-" + t.size;
+      tile.style.order = i;
 
-    // 中心到各节点的射线
-    archNodes.forEach(function (node) {
-      var x = parseFloat(node.style.left), y = parseFloat(node.style.top);
-      var layer = node.getAttribute("data-layer");
-      var color = getLayerColor(layer);
-      var line = document.createElementNS("http://www.w3.org/2000/svg", "line");
-      line.setAttribute("x1", cx); line.setAttribute("y1", cy);
-      line.setAttribute("x2", x); line.setAttribute("y2", y);
-      line.setAttribute("stroke", color);
-      line.setAttribute("stroke-width", "1.5");
-      line.setAttribute("opacity", "0.2");
-      line.setAttribute("class", "arch-line");
-      line.setAttribute("stroke-dasharray", "4 4");
-      svg.appendChild(line);
+      tile.innerHTML =
+        '<div class="tile-inner">' +
+          '<span class="tile-title">' + t.name + '</span>' +
+          '<span class="tile-sub">' + t.sub + '</span>' +
+        '</div>';
+
+      tileCanvas.appendChild(tile);
     });
   }
 
-  function getLayerColor(layer) {
-    var map = { sense: "#0891b2", analyze: "#4f46e5", monitor: "#d97706", data: "#059669", standard: "#7c3aed" };
-    return map[layer] || "#5c6b8a";
-  }
-
-  // ========== 架构图展开/收缩动画 ==========
-  function expandArch() {
-    if (archAnimating || archExpanded) return;
-    archAnimating = true;
-    archExpanded = true;
-
-    // 隐藏 hero 和 sectionView
+  // ========== 显示/隐藏瓦片图 ==========
+  function showTileView() {
     heroSection.style.display = "none";
     sectionView.style.display = "none";
-    archView.classList.add("active");
-
-    // 布局节点
-    layoutArchNodes();
-
-    // 中心枢纽动画
-    archCore.classList.add("expanded");
-
-    // 节点从中心向外扩散
-    archNodes.forEach(function (node, i) {
-      var card = node.querySelector(".arch-node-card");
-      card.style.opacity = "0";
-      card.style.transform = "translate(-50%, -50%) scale(0.3)";
-      card.style.transition = "none";
-
-      setTimeout(function () {
-        card.style.transition = "all 0.6s cubic-bezier(0.22, 1, 0.36, 1)";
-        card.style.opacity = "1";
-        card.style.transform = "translate(-50%, -50%) scale(1)";
-      }, 80 + i * 40);
-    });
-
-    // 连接线淡入
-    setTimeout(function () {
-      var lines = archLines.querySelectorAll(".arch-line");
-      lines.forEach(function (line, i) {
-        line.style.opacity = "0";
-        line.style.transition = "opacity 0.5s ease";
-        setTimeout(function () { line.style.opacity = line.getAttribute("opacity") || "0.35"; }, i * 15);
-      });
-      archAnimating = false;
-    }, 300);
-
-    // 标签显示
-    var labels = document.querySelector(".arch-labels");
-    if (labels) labels.classList.add("show");
+    tileView.classList.add("active");
+    tileVisible = true;
+    renderTiles();
   }
 
-  function collapseArch() {
-    if (archAnimating || !archExpanded) return;
-    archAnimating = true;
-    archExpanded = false;
-
-    // 节点向中心收缩
-    archNodes.forEach(function (node, i) {
-      var card = node.querySelector(".arch-node-card");
-      setTimeout(function () {
-        card.style.transition = "all 0.5s cubic-bezier(0.55, 0, 0.55, 0.2)";
-        card.style.opacity = "0";
-        card.style.transform = "translate(-50%, -50%) scale(0.3)";
-      }, i * 25);
-    });
-
-    // 连接线淡出
-    var lines = archLines.querySelectorAll(".arch-line");
-    lines.forEach(function (line) {
-      line.style.transition = "opacity 0.3s ease";
-      line.style.opacity = "0";
-    });
-
-    // 中心枢纽收缩
-    archCore.classList.remove("expanded");
-
-    // 标签隐藏
-    var labels = document.querySelector(".arch-labels");
-    if (labels) labels.classList.remove("show");
-
-    // 恢复 hero
-    setTimeout(function () {
-      archView.classList.remove("active");
-      heroSection.style.display = "";
-      archAnimating = false;
-    }, 600);
+  function hideTileView() {
+    tileView.classList.remove("active");
+    tileVisible = false;
   }
 
   // ========== 一级目录切换 ==========
   function showSection(sectionId, linkEl) {
-    // 如果点击的是智能体协同
     if (sectionId === "section-arch") {
-      if (archExpanded) {
-        collapseArch();
-      } else {
-        // 先关闭其他 section
-        sectionView.style.display = "none";
-        currentSection = null;
-        navLinks.forEach(function (l) { l.classList.remove("active"); });
-        linkEl.classList.add("active");
-        expandArch();
-      }
+      navLinks.forEach(function (l) { l.classList.remove("active"); });
+      linkEl.classList.add("active");
+      hideAllSections();
+      showTileView();
+      currentSection = "section-arch";
       return;
     }
 
-    // 点击其他目录：收缩架构图（如果展开）
-    if (archExpanded) {
-      collapseArch();
-      // 延迟显示 section，等待收缩动画
-      setTimeout(function () {
-        showSectionContent(sectionId, linkEl);
-      }, 500);
-    } else {
-      showSectionContent(sectionId, linkEl);
-    }
-  }
-
-  function showSectionContent(sectionId, linkEl) {
-    // 更新导航激活状态
+    hideTileView();
     navLinks.forEach(function (l) { l.classList.remove("active"); });
     linkEl.classList.add("active");
 
-    // 隐藏架构图
-    archView.classList.remove("active");
-    archExpanded = false;
-
-    // 隐藏 hero
     heroSection.style.display = "none";
-
-    // 显示 sectionView
     sectionView.style.display = "block";
 
-    // 隐藏所有 section
     var sections = sectionView.querySelectorAll(".platform-section");
     sections.forEach(function (s) { s.style.display = "none"; });
 
-    // 显示目标 section
     var target = document.getElementById(sectionId);
     if (target) {
       target.style.display = "block";
@@ -239,19 +116,15 @@
     currentSection = sectionId;
   }
 
-  function showHome() {
-    // 收缩架构图
-    if (archExpanded) {
-      collapseArch();
-    }
-
-    // 隐藏 sectionView
+  function hideAllSections() {
     sectionView.style.display = "none";
+    tileView.classList.remove("active");
+    heroSection.style.display = "none";
+  }
 
-    // 显示 hero
+  function showHome() {
+    hideAllSections();
     heroSection.style.display = "";
-
-    // 清除导航激活
     navLinks.forEach(function (l) { l.classList.remove("active"); });
     currentSection = null;
   }
@@ -263,8 +136,7 @@
       e.stopPropagation();
       var sectionId = link.getAttribute("data-section");
 
-      // 如果当前已激活且不是架构图，则返回首页
-      if (currentSection === sectionId && sectionId !== "section-arch") {
+      if (currentSection === sectionId) {
         showHome();
         return;
       }
@@ -273,39 +145,22 @@
     });
   });
 
-  // Logo 点击返回首页
   logoHome.addEventListener("click", function (e) {
     e.preventDefault();
     showHome();
   });
 
-  // 遮罩点击
   overlay.addEventListener("click", function () {
-    if (archExpanded) collapseArch();
-    else showHome();
+    showHome();
   });
 
-  // ESC 键
   document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape") {
-      if (archExpanded) collapseArch();
-      else showHome();
-    }
+    if (e.key === "Escape") showHome();
   });
 
-  // 架构图节点点击跳转
-  document.querySelectorAll(".arch-node-card").forEach(function (card) {
-    card.addEventListener("click", function () {
-      var link = card.getAttribute("data-link");
-      if (link) window.open(link, "_blank");
-    });
-  });
-
-  // 窗口 resize 时重新布局架构图
   window.addEventListener("resize", function () {
-    if (archExpanded) layoutArchNodes();
+    if (tileVisible) renderTiles();
   });
 
-  // 初始化：默认显示首页
   showHome();
 })();
