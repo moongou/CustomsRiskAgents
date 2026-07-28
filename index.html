@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>中国海关智能风控多智能体协同平台</title>
+  <title>中国海关智慧风控多智能体协同平台</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 2L4 5.5v5.2c0 4.9 3.4 9.4 8 10.8 4.6-1.4 8-5.9 8-10.8V5.5L12 2z' fill='%234f46e5'/></svg>" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -20,255 +21,31 @@
   <!-- ============ 顶部导航 ============ -->
   <header class="site-header" id="siteHeader">
     <div class="header-inner">
-      <a href="#" class="logo">
+      <a href="#" class="logo" id="logoHome">
         <span class="logo-mark">
           <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L4 5.5v5.2c0 4.9 3.4 9.4 8 10.8 4.6-1.4 8-5.9 8-10.8V5.5L12 2z" fill="url(#lg1)"/><path d="M9 12.2l2.1 2.1L15.5 9.8" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="lg1" x1="4" y1="2" x2="20" y2="22"><stop stop-color="#4f46e5"/><stop offset="1" stop-color="#06b6d4"/></linearGradient></defs></svg>
         </span>
-        <span class="logo-text">中国海关智能风控<em>多智能体协同平台</em></span>
+        <span class="logo-text">智慧风控</span>
       </a>
 
       <nav class="main-nav" id="mainNav">
         <ul class="nav-list">
-          <li class="nav-item"><a href="#" class="nav-link" data-panel="panel-agents" data-color="indigo"><i class="dot dot-indigo"></i>智能体协同</a></li>
-          <li class="nav-item"><a href="#" class="nav-link" data-panel="panel-intel" data-color="cyan"><i class="dot dot-cyan"></i>情报采集</a></li>
-          <li class="nav-item"><a href="#" class="nav-link" data-panel="panel-monitor" data-color="amber"><i class="dot dot-amber"></i>专题监控</a></li>
-          <li class="nav-item"><a href="#" class="nav-link" data-panel="panel-policy" data-color="rose"><i class="dot dot-rose"></i>政策洞察</a></li>
-          <li class="nav-item"><a href="#" class="nav-link" data-panel="panel-data" data-color="emerald"><i class="dot dot-emerald"></i>数据资源</a></li>
-          <li class="nav-item"><a href="#" class="nav-link" data-panel="panel-standards" data-color="violet"><i class="dot dot-violet"></i>标准规范</a></li>
+          <li class="nav-item nav-left"><a href="#" class="nav-link" data-section="section-intel" data-color="cyan"><i class="dot dot-cyan"></i>开源情报</a></li>
+          <li class="nav-item nav-left"><a href="#" class="nav-link" data-section="section-monitor" data-color="amber"><i class="dot dot-amber"></i>专题监控</a></li>
+          <li class="nav-item nav-center"><a href="#" class="nav-link nav-arch" data-section="section-arch" data-color="indigo"><i class="dot dot-indigo"></i>智能体协同</a></li>
+          <li class="nav-item nav-right"><a href="#" class="nav-link" data-section="section-skills" data-color="rose"><i class="dot dot-rose"></i>风控技能</a></li>
+          <li class="nav-item nav-right"><a href="#" class="nav-link" data-section="section-data" data-color="emerald"><i class="dot dot-emerald"></i>资源工具</a></li>
         </ul>
       </nav>
 
       <div class="header-actions">
-        <div class="search-box">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35" stroke-linecap="round"/></svg>
-          <input type="text" placeholder="搜索平台、功能、技术栈…" />
+        <div class="header-stats" id="headerStats">
+          <span class="stat-badge"><b>17</b> 接入平台</span>
+          <span class="stat-badge"><b>11</b> 运行中</span>
         </div>
-        <a class="btn-portal" href="http://localhost:9999" target="_blank" rel="noopener">Dev Dashboard</a>
       </div>
     </div>
   </header>
-
-  <!-- ============ 下拉面板 ============ -->
-  <div class="mega-panel" id="megaPanel">
-    <div class="mega-panel-inner">
-
-      <!-- 智能体协同 -->
-      <div class="panel-content" id="panel-agents" data-color="indigo">
-        <div class="panel-head">
-          <h3>智能体协同 <span>AI Agents</span></h3>
-          <p>事件驱动 · 案例推理 · 特征提取 · 深度分析工作台</p>
-        </div>
-        <div class="panel-grid">
-          <a href="http://localhost:4000" target="_blank" rel="noopener" class="sub-card">
-            <span class="chip chip-indigo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3a5 5 0 015 5v1a5 5 0 01-5 5 5 5 0 01-5-5V8a5 5 0 015-5z"/><path d="M5 21c0-3.3 3.1-6 7-6s7 2.7 7 6" stroke-linecap="round"/></svg></span>
-            <span class="sub-text"><b>观雨分析工作台</b><i>Analyze · DeepAnalyze 深度分析智能体 :4000</i></span>
-            <span class="arrow">→</span>
-          </a>
-          <a href="http://localhost:5400" target="_blank" rel="noopener" class="sub-card">
-            <span class="chip chip-indigo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6h16M4 12h10M4 18h13" stroke-linecap="round"/><circle cx="19" cy="12" r="2.4"/></svg></span>
-            <span class="sub-text"><b>HaiSee 分析转译器</b><i>风险文章 → 结构化分析任务书 :5400</i></span>
-            <span class="arrow">→</span>
-          </a>
-          <a href="http://localhost:8502" target="_blank" rel="noopener" class="sub-card">
-            <span class="chip chip-indigo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l7 3.5v5c0 4.4-3 8.4-7 9.5-4-1.1-7-5.1-7-9.5v-5L12 3z" stroke-linejoin="round"/><path d="M9.5 12l1.8 1.8 3.4-3.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-            <span class="sub-text"><b>海关风险识别智能体</b><i>事件驱动 · 自动爬取 · 跨源串联 :8502</i></span>
-            <span class="arrow">→</span>
-          </a>
-          <a href="http://localhost:8190" target="_blank" rel="noopener" class="sub-card">
-            <span class="chip chip-indigo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-3.8-3.8M8.5 11h5M11 8.5v5" stroke-linecap="round"/></svg></span>
-            <span class="sub-text"><b>以案找案风险分析</b><i>案例检索 · 案件比对 · Vue3 SPA :8190</i></span>
-            <span class="arrow">→</span>
-          </a>
-          <a href="http://localhost:8173" target="_blank" rel="noopener" class="sub-card">
-            <span class="chip chip-indigo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 4v4m0 8v4M4 12h4m8 0h4" stroke-linecap="round"/><circle cx="12" cy="12" r="3.2"/></svg></span>
-            <span class="sub-text"><b>风险特征提取智能体</b><i>特征工程 · 要素抽取 :8173</i></span>
-            <span class="arrow">→</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- 情报采集 -->
-      <div class="panel-content" id="panel-intel" data-color="cyan">
-        <div class="panel-head">
-          <h3>情报采集 <span>Intelligence</span></h3>
-          <p>跨境贸易情报汇聚 · 开源信息处理 · 风险评分</p>
-        </div>
-        <div class="panel-grid">
-          <a href="http://localhost:5178" target="_blank" rel="noopener" class="sub-card">
-            <span class="chip chip-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.5 2.3 3.8 5.2 3.8 8.5s-1.3 6.2-3.8 8.5c-2.5-2.3-3.8-5.2-3.8-8.5S9.5 5.8 12 3.5z"/></svg></span>
-            <span class="sub-text"><b>GatherInfo 情报平台</b><i>全球跨境贸易情报汇聚 :5178</i></span>
-            <span class="arrow">→</span>
-          </a>
-          <a href="http://localhost:5404" target="_blank" rel="noopener" class="sub-card">
-            <span class="chip chip-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="7.2" height="7.2" rx="1.6"/><rect x="13.3" y="3.5" width="7.2" height="7.2" rx="1.6"/><rect x="3.5" y="13.3" width="7.2" height="7.2" rx="1.6"/><rect x="13.3" y="13.3" width="7.2" height="7.2" rx="1.6"/></svg></span>
-            <span class="sub-text"><b>OpenInfoPlatform 总枢纽</b><i>开源信息处理门户 · 8 大频道 :5404</i></span>
-            <span class="arrow">→</span>
-          </a>
-          <a href="http://localhost:5178" target="_blank" rel="noopener" class="sub-card">
-            <span class="chip chip-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19V9m5.5 10V5M15 19v-8m5 8V12" stroke-linecap="round"/></svg></span>
-            <span class="sub-text"><b>风险评分引擎</b><i>多维指标 · 动态评分模型</i></span>
-            <span class="arrow">→</span>
-          </a>
-          <a href="http://localhost:5178" target="_blank" rel="noopener" class="sub-card">
-            <span class="chip chip-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-3.8-3.8" stroke-linecap="round"/></svg></span>
-            <span class="sub-text"><b>情报查询检索</b><i>全文检索 · 多源情报速查</i></span>
-            <span class="arrow">→</span>
-          </a>
-          <a href="http://localhost:5178" target="_blank" rel="noopener" class="sub-card">
-            <span class="chip chip-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 3.5h6M10 3.5v5.2L5 17a2.4 2.4 0 002.2 3.5h9.6A2.4 2.4 0 0019 17l-5-8.3V3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-            <span class="sub-text"><b>数据仿真工具</b><i>贸易流仿真 · 沙盘推演</i></span>
-            <span class="arrow">→</span>
-          </a>
-          <a href="http://localhost:5001" target="_blank" rel="noopener" class="sub-card">
-            <span class="chip chip-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5.5A2.5 2.5 0 016.5 3h11A2.5 2.5 0 0120 5.5v9a2.5 2.5 0 01-2.5 2.5H9l-5 4v-15.5z" stroke-linejoin="round"/></svg></span>
-            <span class="sub-text"><b>公众号情报归档</b><i>微信公众号采集归档 :5001</i></span>
-            <span class="arrow">→</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- 专题监控 -->
-      <div class="panel-content" id="panel-monitor" data-color="amber">
-        <div class="panel-head">
-          <h3>专题监控 <span>Monitoring</span></h3>
-          <p>两用物项 · 出口管制 · 反制措施 · 大宗品类</p>
-        </div>
-        <div class="panel-grid">
-          <a href="http://localhost:8200" target="_blank" rel="noopener" class="sub-card">
-            <span class="chip chip-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3z" stroke-linejoin="round"/><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5" stroke-linejoin="round"/></svg></span>
-            <span class="sub-text"><b>两用物项监控平台</b><i>dual_use_material · 51 号公告 · 许可证 :8200</i></span>
-            <span class="arrow">→</span>
-          </a>
-          <a href="http://localhost:8100" target="_blank" rel="noopener" class="sub-card">
-            <span class="chip chip-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3.5 12h17M12 3.5v17" stroke-linecap="round"/><circle cx="12" cy="12" r="8.5"/></svg></span>
-            <span class="sub-text"><b>出口管制监控平台</b><i>战略矿产 · UN Comtrade 镜像 :8100</i></span>
-            <span class="arrow">→</span>
-          </a>
-          <a href="http://localhost:8300" target="_blank" rel="noopener" class="sub-card">
-            <span class="chip chip-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3.5v17M5 7.5l7-4 7 4M5 7.5v6c0 3 3 5.5 7 7 4-1.5 7-4 7-7v-6" stroke-linejoin="round"/></svg></span>
-            <span class="sub-text"><b>反制措施监控平台</b><i>不可靠实体清单 · 出口管制名录 :8300</i></span>
-            <span class="arrow">→</span>
-          </a>
-          <a href="http://localhost:8560" target="_blank" rel="noopener" class="sub-card">
-            <span class="chip chip-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 20.5c-2-2.2-3-5-3-7.5C4 7.5 8.5 3.5 20 3.5c0 11.5-4 16-9.5 16-1.2 0-2.4-.3-3.5-1z" stroke-linejoin="round"/><path d="M7 20.5C9 14 12 10 17 6.5" stroke-linecap="round"/></svg></span>
-            <span class="sub-text"><b>化肥贸易监控平台</b><i>HS 3101-3105 进出口分析 :8560</i></span>
-            <span class="arrow">→</span>
-          </a>
-          <a href="http://localhost:8508" target="_blank" rel="noopener" class="sub-card">
-            <span class="chip chip-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7.5l8-4 8 4-8 4-8-4z" stroke-linejoin="round"/><path d="M4 7.5v9l8 4 8-4v-9M12 11.5v9" stroke-linejoin="round"/></svg></span>
-            <span class="sub-text"><b>固体废物监控平台</b><i>固废监管法规库 · 进口路径 :8508</i></span>
-            <span class="arrow">→</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- 政策洞察 -->
-      <div class="panel-content" id="panel-policy" data-color="rose">
-        <div class="panel-head">
-          <h3>政策洞察 <span>Policy Ripple</span></h3>
-          <p>部委政策采集 · 影响网络 · 多智能体深度分析</p>
-        </div>
-        <div class="panel-grid">
-          <a href="http://localhost:18880" target="_blank" rel="noopener" class="sub-card">
-            <span class="chip chip-rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="2.2"/><circle cx="12" cy="12" r="5.8" opacity=".65"/><circle cx="12" cy="12" r="9.2" opacity=".35"/></svg></span>
-            <span class="sub-text"><b>RippleOfPolicy 工作台</b><i>政策涟漪分析中枢 :18880</i></span>
-            <span class="arrow">→</span>
-          </a>
-          <a href="http://localhost:18880" target="_blank" rel="noopener" class="sub-card">
-            <span class="chip chip-rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5.5h16M4 12h16M4 18.5h10" stroke-linecap="round"/></svg></span>
-            <span class="sub-text"><b>政策多维搜索</b><i>可追溯 · 多维度政策检索</i></span>
-            <span class="arrow">→</span>
-          </a>
-          <a href="http://localhost:18880" target="_blank" rel="noopener" class="sub-card">
-            <span class="chip chip-rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="6" cy="6" r="2.6"/><circle cx="18" cy="8" r="2.6"/><circle cx="10" cy="18" r="2.6"/><path d="M8.3 7l7.2.8M7.4 8.4l1.7 7M16 10.2l-4.4 5.4" stroke-linecap="round"/></svg></span>
-            <span class="sub-text"><b>影响网络可视化</b><i>政策传导 · 关联图谱</i></span>
-            <span class="arrow">→</span>
-          </a>
-          <a href="http://localhost:18880" target="_blank" rel="noopener" class="sub-card">
-            <span class="chip chip-rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="17" height="13" rx="2"/><path d="M8 20.5h8M12 16.5v4" stroke-linecap="round"/><path d="M7 9.5l2.5 2.5L7 14.5M12.5 14.5H17" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-            <span class="sub-text"><b>多智能体深度分析</b><i>Go API + 推理服务协同</i></span>
-            <span class="arrow">→</span>
-          </a>
-          <a href="http://localhost:18883" target="_blank" rel="noopener" class="sub-card">
-            <span class="chip chip-rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3.5 12h4l2-5.5 4 11 2.5-5.5h4.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-            <span class="sub-text"><b>采集健康监控</b><i>部委源站采集状态 :18883</i></span>
-            <span class="arrow">→</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- 数据资源 -->
-      <div class="panel-content" id="panel-data" data-color="emerald">
-        <div class="panel-head">
-          <h3>数据资源 <span>Data Hub</span></h3>
-          <p>贸易数据 · 商品价格 · 舆情案件 · 船舶轨迹</p>
-        </div>
-        <div class="panel-grid">
-          <a href="http://localhost:8150" target="_blank" rel="noopener" class="sub-card">
-            <span class="chip chip-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><ellipse cx="12" cy="5.8" rx="7.5" ry="2.8"/><path d="M4.5 5.8v12.4c0 1.5 3.4 2.8 7.5 2.8s7.5-1.3 7.5-2.8V5.8M4.5 12c0 1.5 3.4 2.8 7.5 2.8s7.5-1.3 7.5-2.8"/></svg></span>
-            <span class="sub-text"><b>UN Comtrade 数据中心</b><i>任务提交 · 工作日志 · 入库 PG :8150</i></span>
-            <span class="arrow">→</span>
-          </a>
-          <a href="http://localhost:9201" target="_blank" rel="noopener" class="sub-card">
-            <span class="chip chip-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3.5h12l2.5 4.5L12 20.5 3.5 8 6 3.5z" stroke-linejoin="round"/><path d="M3.5 8h17M9.5 8L12 20.5 14.5 8M9.5 8L12 3.5 14.5 8" stroke-linejoin="round"/></svg></span>
-            <span class="sub-text"><b>国际商品价格库</b><i>World Bank 粉红单 · IMF 价格 :9201</i></span>
-            <span class="arrow">→</span>
-          </a>
-          <a href="http://localhost:8180" target="_blank" rel="noopener" class="sub-card">
-            <span class="chip chip-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6a2 2 0 012-2h12a2 2 0 012 2v8a2 2 0 01-2 2H9l-5 4V6z" stroke-linejoin="round"/><path d="M8 9h8M8 12.5h5" stroke-linecap="round"/></svg></span>
-            <span class="sub-text"><b>风险舆情解析库</b><i>新闻媒体 · 行业舆情解析 :8180</i></span>
-            <span class="arrow">→</span>
-          </a>
-          <a href="http://localhost:8500" target="_blank" rel="noopener" class="sub-card">
-            <span class="chip chip-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6.5 3.5h11v17l-5.5-3-5.5 3v-17z" stroke-linejoin="round"/></svg></span>
-            <span class="sub-text"><b>历史案件解析库</b><i>可持续采集 · LLM 抽取 :8500</i></span>
-            <span class="arrow">→</span>
-          </a>
-          <a href="http://localhost:8158" target="_blank" rel="noopener" class="sub-card">
-            <span class="chip chip-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3.5v9m0 0l-3.5-3.5M12 12.5l3.5-3.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M4.5 15.5v3a2 2 0 002 2h11a2 2 0 002-2v-3" stroke-linecap="round"/></svg></span>
-            <span class="sub-text"><b>全球贸易调取渠道</b><i>多源调研 · 入库看板 :8158</i></span>
-            <span class="arrow">→</span>
-          </a>
-          <a href="http://localhost:8160" target="_blank" rel="noopener" class="sub-card">
-            <span class="chip chip-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3.5 17c2-1.5 4-1.5 6 0s4 1.5 6 0 3.5-1.2 5 0" stroke-linecap="round"/><path d="M6 14l1-7h10l1 7M12 7V3.5M9.5 3.5h5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-            <span class="sub-text"><b>AIS 船舶轨迹面板</b><i>港新/加勒比分拨 · 申报路径 :8160</i></span>
-            <span class="arrow">→</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- 标准规范 -->
-      <div class="panel-content" id="panel-standards" data-color="violet">
-        <div class="panel-head">
-          <h3>标准规范 <span>Standards</span></h3>
-          <p>法规标准 · 基础参数 · 管制专题 · SPS/TBT</p>
-        </div>
-        <div class="panel-grid">
-          <a href="http://localhost:8289" target="_blank" rel="noopener" class="sub-card">
-            <span class="chip chip-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3.5L4 6.8v10.4l8 3.3 8-3.3V6.8L12 3.5z" stroke-linejoin="round"/><path d="M12 8v5M12 16.2v.3" stroke-linecap="round"/></svg></span>
-            <span class="sub-text"><b>全球海关法规标准库</b><i>法规 3082 条 · WTO 通报检索 :8289</i></span>
-            <span class="arrow">→</span>
-          </a>
-          <a href="http://localhost:8780" target="_blank" rel="noopener" class="sub-card">
-            <span class="chip chip-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="4.5" width="17" height="15" rx="2"/><path d="M3.5 9.5h17M8 4.5v15" /><path d="M12 13h4M12 16h4" stroke-linecap="round"/></svg></span>
-            <span class="sub-text"><b>海关数据基础参数库</b><i>税则 8972 条 · 监管证件 :8780</i></span>
-            <span class="arrow">→</span>
-          </a>
-          <a href="http://localhost:8600" target="_blank" rel="noopener" class="sub-card">
-            <span class="chip chip-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4.5 19.5V5a1.5 1.5 0 011.5-1.5h12A1.5 1.5 0 0119.5 5v14.5" stroke-linecap="round"/><path d="M8 8h8M8 11.5h8M8 15h5" stroke-linecap="round"/></svg></span>
-            <span class="sub-text"><b>贸易管制专题库</b><i>486 条两用物项 · 许可证件 :8600</i></span>
-            <span class="arrow">→</span>
-          </a>
-          <a href="http://localhost:5403" target="_blank" rel="noopener" class="sub-card">
-            <span class="chip chip-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3.5a8.5 8.5 0 108.5 8.5" stroke-linecap="round"/><path d="M15 3.5h5.5V9M20.5 3.5L14 10" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-            <span class="sub-text"><b>TBT/SPS 智能监测</b><i>技术性贸易措施监测平台 :5403</i></span>
-            <span class="arrow">→</span>
-          </a>
-        </div>
-      </div>
-
-    </div>
-  </div>
 
   <!-- 遮罩 -->
   <div class="overlay" id="overlay"></div>
@@ -276,163 +53,378 @@
   <!-- ============ 页面主体 ============ -->
   <main class="page-body">
 
-    <!-- Hero -->
-    <section class="hero">
+    <!-- ========== 智能体协同 · 架构图视图 ========== -->
+    <section class="arch-view" id="archView">
+      <div class="arch-canvas" id="archCanvas">
+        <!-- 中心枢纽 -->
+        <div class="arch-core" id="archCore">
+          <div class="arch-core-ring ring-1"></div>
+          <div class="arch-core-ring ring-2"></div>
+          <div class="arch-core-ring ring-3"></div>
+          <div class="arch-core-inner">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L4 5.5v5.2c0 4.9 3.4 9.4 8 10.8 4.6-1.4 8-5.9 8-10.8V5.5L12 2z"/><path d="M9 12.2l2.1 2.1L15.5 9.8"/></svg>
+            <span>智慧风控中枢</span>
+          </div>
+        </div>
+
+        <!-- 架构节点：感知层 -->
+        <div class="arch-node" data-layer="sense" data-angle="0" data-dist="280">
+          <div class="arch-node-card" data-link="http://localhost:5178">
+            <div class="arch-node-icon cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.5 2.3 3.8 5.2 3.8 8.5s-1.3 6.2-3.8 8.5c-2.5-2.3-3.8-5.2-3.8-8.5S9.5 5.8 12 3.5z"/></svg></div>
+            <div class="arch-node-text"><b>跨境贸易执法</b><span>GatherInfo</span></div>
+          </div>
+        </div>
+        <div class="arch-node" data-layer="sense" data-angle="60" data-dist="280">
+          <div class="arch-node-card" data-link="http://localhost:18880">
+            <div class="arch-node-icon cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="2.2"/><circle cx="12" cy="12" r="5.8" opacity=".65"/><circle cx="12" cy="12" r="9.2" opacity=".35"/></svg></div>
+            <div class="arch-node-text"><b>政策洞察</b><span>RippleOfPolicy</span></div>
+          </div>
+        </div>
+        <div class="arch-node" data-layer="sense" data-angle="120" data-dist="280">
+          <div class="arch-node-card" data-link="http://localhost:5403">
+            <div class="arch-node-icon cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3.5a8.5 8.5 0 108.5 8.5" stroke-linecap="round"/><path d="M15 3.5h5.5V9M20.5 3.5L14 10" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div class="arch-node-text"><b>TBT/SPS 监测</b><span>技贸措施</span></div>
+          </div>
+        </div>
+        <div class="arch-node" data-layer="sense" data-angle="180" data-dist="280">
+          <div class="arch-node-card" data-link="http://localhost:5404">
+            <div class="arch-node-icon cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="7.2" height="7.2" rx="1.6"/><rect x="13.3" y="3.5" width="7.2" height="7.2" rx="1.6"/><rect x="3.5" y="13.3" width="7.2" height="7.2" rx="1.6"/><rect x="13.3" y="13.3" width="7.2" height="7.2" rx="1.6"/></svg></div>
+            <div class="arch-node-text"><b>开源情报枢纽</b><span>OpenInfoPlatform</span></div>
+          </div>
+        </div>
+        <div class="arch-node" data-layer="sense" data-angle="240" data-dist="280">
+          <div class="arch-node-card" data-link="http://localhost:5001">
+            <div class="arch-node-icon cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5.5A2.5 2.5 0 016.5 3h11A2.5 2.5 0 0120 5.5v9a2.5 2.5 0 01-2.5 2.5H9l-5 4v-15.5z" stroke-linejoin="round"/></svg></div>
+            <div class="arch-node-text"><b>公众号情报</b><span>微信归档</span></div>
+          </div>
+        </div>
+        <div class="arch-node" data-layer="sense" data-angle="300" data-dist="280">
+          <div class="arch-node-card" data-link="http://localhost:5178">
+            <div class="arch-node-icon cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-3.8-3.8" stroke-linecap="round"/></svg></div>
+            <div class="arch-node-text"><b>情报查询检索</b><span>全文检索</span></div>
+          </div>
+        </div>
+
+        <!-- 架构节点：分析层 -->
+        <div class="arch-node" data-layer="analyze" data-angle="30" data-dist="180">
+          <div class="arch-node-card" data-link="http://localhost:8502">
+            <div class="arch-node-icon indigo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l7 3.5v5c0 4.4-3 8.4-7 9.5-4-1.1-7-5.1-7-9.5v-5L12 3z" stroke-linejoin="round"/><path d="M9.5 12l1.8 1.8 3.4-3.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div class="arch-node-text"><b>风险识别</b><span>事件驱动</span></div>
+          </div>
+        </div>
+        <div class="arch-node" data-layer="analyze" data-angle="90" data-dist="180">
+          <div class="arch-node-card" data-link="http://localhost:8190">
+            <div class="arch-node-icon indigo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-3.8-3.8M8.5 11h5M11 8.5v5" stroke-linecap="round"/></svg></div>
+            <div class="arch-node-text"><b>以案找案</b><span>案例比对</span></div>
+          </div>
+        </div>
+        <div class="arch-node" data-layer="analyze" data-angle="150" data-dist="180">
+          <div class="arch-node-card" data-link="http://localhost:8173">
+            <div class="arch-node-icon indigo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 4v4m0 8v4M4 12h4m8 0h4" stroke-linecap="round"/><circle cx="12" cy="12" r="3.2"/></svg></div>
+            <div class="arch-node-text"><b>特征提取</b><span>要素抽取</span></div>
+          </div>
+        </div>
+        <div class="arch-node" data-layer="analyze" data-angle="210" data-dist="180">
+          <div class="arch-node-card" data-link="http://localhost:5400">
+            <div class="arch-node-icon indigo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6h16M4 12h10M4 18h13" stroke-linecap="round"/><circle cx="19" cy="12" r="2.4"/></svg></div>
+            <div class="arch-node-text"><b>HaiSee 转译</b><span>文章→任务书</span></div>
+          </div>
+        </div>
+        <div class="arch-node" data-layer="analyze" data-angle="270" data-dist="180">
+          <div class="arch-node-card" data-link="http://localhost:4000">
+            <div class="arch-node-icon indigo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3a5 5 0 015 5v1a5 5 0 01-5 5 5 5 0 01-5-5V8a5 5 0 015-5z"/><path d="M5 21c0-3.3 3.1-6 7-6s7 2.7 7 6" stroke-linecap="round"/></svg></div>
+            <div class="arch-node-text"><b>观雨分析</b><span>深度分析</span></div>
+          </div>
+        </div>
+        <div class="arch-node" data-layer="analyze" data-angle="330" data-dist="180">
+          <div class="arch-node-card" data-link="http://localhost:18880">
+            <div class="arch-node-icon indigo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="17" height="13" rx="2"/><path d="M8 20.5h8M12 16.5v4" stroke-linecap="round"/><path d="M7 9.5l2.5 2.5L7 14.5M12.5 14.5H17" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div class="arch-node-text"><b>多智能体分析</b><span>深度推理</span></div>
+          </div>
+        </div>
+
+        <!-- 架构节点：监控层 -->
+        <div class="arch-node" data-layer="monitor" data-angle="0" data-dist="380">
+          <div class="arch-node-card" data-link="http://localhost:8200">
+            <div class="arch-node-icon amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3z" stroke-linejoin="round"/><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5" stroke-linejoin="round"/></svg></div>
+            <div class="arch-node-text"><b>两用物项</b><span>51号公告</span></div>
+          </div>
+        </div>
+        <div class="arch-node" data-layer="monitor" data-angle="72" data-dist="380">
+          <div class="arch-node-card" data-link="http://localhost:8100">
+            <div class="arch-node-icon amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3.5 12h17M12 3.5v17" stroke-linecap="round"/><circle cx="12" cy="12" r="8.5"/></svg></div>
+            <div class="arch-node-text"><b>出口管制</b><span>战略矿产</span></div>
+          </div>
+        </div>
+        <div class="arch-node" data-layer="monitor" data-angle="144" data-dist="380">
+          <div class="arch-node-card" data-link="http://localhost:8300">
+            <div class="arch-node-icon amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3.5v17M5 7.5l7-4 7 4M5 7.5v6c0 3 3 5.5 7 7 4-1.5 7-4 7-7v-6" stroke-linejoin="round"/></svg></div>
+            <div class="arch-node-text"><b>反制措施</b><span>不可靠清单</span></div>
+          </div>
+        </div>
+        <div class="arch-node" data-layer="monitor" data-angle="216" data-dist="380">
+          <div class="arch-node-card" data-link="http://localhost:8560">
+            <div class="arch-node-icon amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 20.5c-2-2.2-3-5-3-7.5C4 7.5 8.5 3.5 20 3.5c0 11.5-4 16-9.5 16-1.2 0-2.4-.3-3.5-1z" stroke-linejoin="round"/><path d="M7 20.5C9 14 12 10 17 6.5" stroke-linecap="round"/></svg></div>
+            <div class="arch-node-text"><b>化肥贸易</b><span>HS 3101-3105</span></div>
+          </div>
+        </div>
+        <div class="arch-node" data-layer="monitor" data-angle="288" data-dist="380">
+          <div class="arch-node-card" data-link="http://localhost:8508">
+            <div class="arch-node-icon amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7.5l8-4 8 4-8 4-8-4z" stroke-linejoin="round"/><path d="M4 7.5v9l8 4 8-4v-9M12 11.5v9" stroke-linejoin="round"/></svg></div>
+            <div class="arch-node-text"><b>固体废物</b><span>固废监管</span></div>
+          </div>
+        </div>
+
+        <!-- 架构节点：数据层 -->
+        <div class="arch-node" data-layer="data" data-angle="36" data-dist="480">
+          <div class="arch-node-card" data-link="http://localhost:8150">
+            <div class="arch-node-icon emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><ellipse cx="12" cy="5.8" rx="7.5" ry="2.8"/><path d="M4.5 5.8v12.4c0 1.5 3.4 2.8 7.5 2.8s7.5-1.3 7.5-2.8V5.8M4.5 12c0 1.5 3.4 2.8 7.5 2.8s7.5-1.3 7.5-2.8"/></svg></div>
+            <div class="arch-node-text"><b>UN Comtrade</b><span>贸易数据</span></div>
+          </div>
+        </div>
+        <div class="arch-node" data-layer="data" data-angle="108" data-dist="480">
+          <div class="arch-node-card" data-link="http://localhost:8160">
+            <div class="arch-node-icon emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3.5 17c2-1.5 4-1.5 6 0s4 1.5 6 0 3.5-1.2 5 0" stroke-linecap="round"/><path d="M6 14l1-7h10l1 7M12 7V3.5M9.5 3.5h5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div class="arch-node-text"><b>AIS 船舶轨迹</b><span>港新/加勒比</span></div>
+          </div>
+        </div>
+        <div class="arch-node" data-layer="data" data-angle="180" data-dist="480">
+          <div class="arch-node-card" data-link="http://localhost:8500">
+            <div class="arch-node-icon emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6.5 3.5h11v17l-5.5-3-5.5 3v-17z" stroke-linejoin="round"/></svg></div>
+            <div class="arch-node-text"><b>历史案件</b><span>LLM 抽取</span></div>
+          </div>
+        </div>
+        <div class="arch-node" data-layer="data" data-angle="252" data-dist="480">
+          <div class="arch-node-card" data-link="http://localhost:9201">
+            <div class="arch-node-icon emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3.5h12l2.5 4.5L12 20.5 3.5 8 6 3.5z" stroke-linejoin="round"/><path d="M3.5 8h17M9.5 8L12 20.5 14.5 8M9.5 8L12 3.5 14.5 8" stroke-linejoin="round"/></svg></div>
+            <div class="arch-node-text"><b>商品价格库</b><span>World Bank</span></div>
+          </div>
+        </div>
+        <div class="arch-node" data-layer="data" data-angle="324" data-dist="480">
+          <div class="arch-node-card" data-link="http://localhost:8158">
+            <div class="arch-node-icon emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3.5v9m0 0l-3.5-3.5M12 12.5l3.5-3.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M4.5 15.5v3a2 2 0 002 2h11a2 2 0 002-2v-3" stroke-linecap="round"/></svg></div>
+            <div class="arch-node-text"><b>贸易数据汇集</b><span>8源入库</span></div>
+          </div>
+        </div>
+
+        <!-- 架构节点：标准层 -->
+        <div class="arch-node" data-layer="standard" data-angle="60" data-dist="580">
+          <div class="arch-node-card" data-link="http://localhost:8289">
+            <div class="arch-node-icon violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3.5L4 6.8v10.4l8 3.3 8-3.3V6.8L12 3.5z" stroke-linejoin="round"/><path d="M12 8v5M12 16.2v.3" stroke-linecap="round"/></svg></div>
+            <div class="arch-node-text"><b>法规标准库</b><span>3082条法规</span></div>
+          </div>
+        </div>
+        <div class="arch-node" data-layer="standard" data-angle="180" data-dist="580">
+          <div class="arch-node-card" data-link="http://localhost:8780">
+            <div class="arch-node-icon violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="4.5" width="17" height="15" rx="2"/><path d="M3.5 9.5h17M8 4.5v15"/><path d="M12 13h4M12 16h4" stroke-linecap="round"/></svg></div>
+            <div class="arch-node-text"><b>基础参数</b><span>税则8972条</span></div>
+          </div>
+        </div>
+        <div class="arch-node" data-layer="standard" data-angle="300" data-dist="580">
+          <div class="arch-node-card" data-link="http://localhost:8600">
+            <div class="arch-node-icon violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4.5 19.5V5a1.5 1.5 0 011.5-1.5h12A1.5 1.5 0 0119.5 5v14.5" stroke-linecap="round"/><path d="M8 8h8M8 11.5h8M8 15h5" stroke-linecap="round"/></svg></div>
+            <div class="arch-node-text"><b>管制清单库</b><span>486条物项</span></div>
+          </div>
+        </div>
+
+        <!-- 连接线 -->
+        <svg class="arch-lines" id="archLines"></svg>
+      </div>
+
+      <!-- 架构图标签 -->
+      <div class="arch-labels">
+        <div class="arch-label" style="--label-color: var(--cyan);"><span style="background: var(--cyan);"></span>感知 · 开源情报</div>
+        <div class="arch-label" style="--label-color: var(--indigo);"><span style="background: var(--indigo);"></span>分析 · 智能体协同</div>
+        <div class="arch-label" style="--label-color: var(--amber);"><span style="background: var(--amber);"></span>监控 · 专题布控</div>
+        <div class="arch-label" style="--label-color: var(--emerald);"><span style="background: var(--emerald);"></span>数据 · 资源工具</div>
+        <div class="arch-label" style="--label-color: var(--violet);"><span style="background: var(--violet);"></span>标准 · 规范底座</div>
+      </div>
+    </section>
+
+    <!-- ========== 一级目录内容区（默认隐藏） ========== -->
+    <div class="section-view" id="sectionView" style="display: none;">
+
+      <!-- 开源情报 -->
+      <section class="platform-section" id="section-intel" data-color="cyan">
+        <div class="section-title">
+          <span class="section-bar bar-cyan"></span>
+          <h2>开源情报 <span class="section-tag">全网搜集 · 智能处理 · 服务战略</span></h2>
+        </div>
+        <div class="card-grid cols-3">
+          <a class="p-card" href="http://localhost:5178" target="_blank" rel="noopener">
+            <div class="p-top"><span class="chip chip-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.5 2.3 3.8 5.2 3.8 8.5s-1.3 6.2-3.8 8.5c-2.5-2.3-3.8-5.2-3.8-8.5S9.5 5.8 12 3.5z"/></svg></span><div class="p-meta"><b>跨境贸易执法查发</b><span class="port">:5178</span></div><span class="status on">运行中</span></div>
+            <p class="p-desc">跨境贸易执法查发平台 —— 全球跨境贸易情报汇聚、执法查发案例分析与风险线索挖掘</p>
+            <p class="p-tech">Python · FastAPI · 多源情报聚合</p>
+            <span class="p-link">进入平台 →</span>
+          </a>
+          <a class="p-card" href="http://localhost:18880" target="_blank" rel="noopener">
+            <div class="p-top"><span class="chip chip-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="2.2"/><circle cx="12" cy="12" r="5.8" opacity=".65"/><circle cx="12" cy="12" r="9.2" opacity=".35"/></svg></span><div class="p-meta"><b>全球经济体外贸政策</b><span class="port">:18880</span></div><span class="status on">运行中</span></div>
+            <p class="p-desc">RippleOfPolicy 工作台 —— 全球经济体外贸政策采集、政策涟漪影响分析与传导网络可视化</p>
+            <p class="p-tech">Python · FastAPI · 政策涟漪分析</p>
+            <span class="p-link">进入平台 →</span>
+          </a>
+          <a class="p-card" href="http://localhost:18880" target="_blank" rel="noopener">
+            <div class="p-top"><span class="chip chip-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5.5h16M4 12h16M4 18.5h10" stroke-linecap="round"/></svg></span><div class="p-meta"><b>中国国家部委新政</b><span class="port">:18880</span></div><span class="status on">运行中</span></div>
+            <p class="p-desc">国家部委新政采集监控 —— 各部委政策文件实时采集、健康状态监控与多维检索</p>
+            <p class="p-tech">Python · FastAPI · 部委源站采集</p>
+            <span class="p-link">进入平台 →</span>
+          </a>
+          <a class="p-card" href="http://localhost:5403" target="_blank" rel="noopener">
+            <div class="p-top"><span class="chip chip-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3.5a8.5 8.5 0 108.5 8.5" stroke-linecap="round"/><path d="M15 3.5h5.5V9M20.5 3.5L14 10" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div class="p-meta"><b>全球技贸措施通报</b><span class="port">:5403</span></div><span class="status on">运行中</span></div>
+            <p class="p-desc">TBT/SPS 智能监测平台 —— 技术性贸易措施通报监测、WTO 通报检索与风险预警</p>
+            <p class="p-tech">Python · FastAPI · TBT/SPS 监测</p>
+            <span class="p-link">进入平台 →</span>
+          </a>
+          <a class="p-card" href="http://localhost:5178" target="_blank" rel="noopener">
+            <div class="p-top"><span class="chip chip-cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-3.8-3.8" stroke-linecap="round"/></svg></span><div class="p-meta"><b>信息情报查询检索</b><span class="port">:5178</span></div><span class="status on">运行中</span></div>
+            <p class="p-desc">多源情报全文检索 —— 跨平台情报信息统一查询、全文检索与风险速查</p>
+            <p class="p-tech">Python · FastAPI · 全文检索引擎</p>
+            <span class="p-link">进入平台 →</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- 专题监控 -->
+      <section class="platform-section" id="section-monitor" data-color="amber">
+        <div class="section-title">
+          <span class="section-bar bar-amber"></span>
+          <h2>专题监控 <span class="section-tag">前瞻视角 · 领域丰富 · 洞察深入</span></h2>
+        </div>
+        <div class="card-grid cols-3">
+          <a class="p-card" href="http://localhost:8100" target="_blank" rel="noopener">
+            <div class="p-top"><span class="chip chip-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3.5 12h17M12 3.5v17" stroke-linecap="round"/><circle cx="12" cy="12" r="8.5"/></svg></span><div class="p-meta"><b>关键矿产资源</b><span class="port">:8100</span></div><span class="status on">运行中</span></div>
+            <p class="p-desc">关键矿产资源监控平台 —— 战略矿产出口管制监测、UN Comtrade 镜像分析与贸易流向追踪</p>
+            <p class="p-tech">Python · Flask · PostgreSQL · ECharts</p>
+            <span class="p-link">进入平台 →</span>
+          </a>
+          <a class="p-card" href="http://localhost:8300" target="_blank" rel="noopener">
+            <div class="p-top"><span class="chip chip-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3.5v17M5 7.5l7-4 7 4M5 7.5v6c0 3 3 5.5 7 7 4-1.5 7-4 7-7v-6" stroke-linejoin="round"/></svg></span><div class="p-meta"><b>出口管制与反制措施</b><span class="port">:8300</span></div><span class="status on">运行中</span></div>
+            <p class="p-desc">出口管制与反制措施监控平台 —— 反制关税、不可靠实体清单、出口管制名录与执法案例</p>
+            <p class="p-tech">Python · Flask · ECharts · 8500 案件库代理</p>
+            <span class="p-link">进入平台 →</span>
+          </a>
+          <a class="p-card" href="http://localhost:8200" target="_blank" rel="noopener">
+            <div class="p-top"><span class="chip chip-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3z" stroke-linejoin="round"/><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5" stroke-linejoin="round"/></svg></span><div class="p-meta"><b>两用物项监控平台</b><span class="port">:8200</span></div><span class="status on">运行中</span></div>
+            <p class="p-desc">两用物项监控平台 —— 商务部 2024 年第 51 号公告、许可证制度、终端用户审查与执法案例</p>
+            <p class="p-tech">Python · Flask · ECharts · 8500 案件库代理</p>
+            <span class="p-link">进入平台 →</span>
+          </a>
+          <a class="p-card" href="http://localhost:8560" target="_blank" rel="noopener">
+            <div class="p-top"><span class="chip chip-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 20.5c-2-2.2-3-5-3-7.5C4 7.5 8.5 3.5 20 3.5c0 11.5-4 16-9.5 16-1.2 0-2.4-.3-3.5-1z" stroke-linejoin="round"/><path d="M7 20.5C9 14 12 10 17 6.5" stroke-linecap="round"/></svg></span><div class="p-meta"><b>化肥贸易监控平台</b><span class="port">:8560</span></div><span class="status off">按需启动</span></div>
+            <p class="p-desc">化肥贸易监控平台 —— 全球化肥 HS 3101-3105 进出口贸易数据分析、氮磷钾复合肥监测</p>
+            <p class="p-tech">Python · FastAPI · psycopg2 · ECharts</p>
+            <span class="p-link">启动并进入 →</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- 风控技能 -->
+      <section class="platform-section" id="section-skills" data-color="rose">
+        <div class="section-title">
+          <span class="section-bar bar-rose"></span>
+          <h2>风控技能 <span class="section-tag">专精特新 · 实用可靠 · 协作共享</span></h2>
+        </div>
+        <div class="card-grid cols-3">
+          <a class="p-card" href="http://localhost:5400" target="_blank" rel="noopener">
+            <div class="p-top"><span class="chip chip-rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6h16M4 12h10M4 18h13" stroke-linecap="round"/><circle cx="19" cy="12" r="2.4"/></svg></span><div class="p-meta"><b>信息情报价值与处置评估</b><span class="port">:5400</span></div><span class="status on">运行中</span></div>
+            <p class="p-desc">HaiSee 转译分析工具 —— 风险文章 → 结构化分析任务书，情报价值评估与处置建议生成</p>
+            <p class="p-tech">Python · FastAPI · LLM 结构化抽取</p>
+            <span class="p-link">进入平台 →</span>
+          </a>
+          <a class="p-card" href="http://localhost:8173" target="_blank" rel="noopener">
+            <div class="p-top"><span class="chip chip-rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 4v4m0 8v4M4 12h4m8 0h4" stroke-linecap="round"/><circle cx="12" cy="12" r="3.2"/></svg></span><div class="p-meta"><b>查验结果因子化</b><span class="port">:8173</span></div><span class="status off">按需启动</span></div>
+            <p class="p-desc">查验结果因子化工具 —— 查验记录结构化提取、风险因子量化分析与布控建议</p>
+            <p class="p-tech">Vue 3 · Element Plus · 风险因子工程</p>
+            <span class="p-link">启动并进入 →</span>
+          </a>
+          <a class="p-card" href="http://localhost:8190" target="_blank" rel="noopener">
+            <div class="p-top"><span class="chip chip-rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-3.8-3.8M8.5 11h5M11 8.5v5" stroke-linecap="round"/></svg></span><div class="p-meta"><b>「以案找案」风险分析</b><span class="port">:8190</span></div><span class="status on">运行中</span></div>
+            <p class="p-desc">以案找案风险分析平台 —— 输入线索→案例比对→3 分流，转口走私研判专项已上线</p>
+            <p class="p-tech">Vue 3 · Element Plus · 案例检索比对</p>
+            <span class="p-link">进入平台 →</span>
+          </a>
+          <a class="p-card" href="http://localhost:8173" target="_blank" rel="noopener">
+            <div class="p-top"><span class="chip chip-rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 4v4m0 8v4M4 12h4m8 0h4" stroke-linecap="round"/><circle cx="12" cy="12" r="3.2"/></svg></span><div class="p-meta"><b>风险特征提取</b><span class="port">:8173</span></div><span class="status off">按需启动</span></div>
+            <p class="p-desc">风险特征提取智能体 —— 风险特征要素提取与结构化、布控表达式生成</p>
+            <p class="p-tech">Vue 3 · Element Plus · 特征工程</p>
+            <span class="p-link">启动并进入 →</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- 资源工具 -->
+      <section class="platform-section" id="section-data" data-color="emerald">
+        <div class="section-title">
+          <span class="section-bar bar-emerald"></span>
+          <h2>资源工具 <span class="section-tag">目标务实 · 措施精准 · 闭环有效</span></h2>
+        </div>
+        <div class="card-grid cols-3">
+          <a class="p-card" href="http://localhost:8289" target="_blank" rel="noopener">
+            <div class="p-top"><span class="chip chip-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3.5L4 6.8v10.4l8 3.3 8-3.3V6.8L12 3.5z" stroke-linejoin="round"/><path d="M12 8v5M12 16.2v.3" stroke-linecap="round"/></svg></span><div class="p-meta"><b>全球海关法规标准库</b><span class="port">:8289</span></div><span class="status on">运行中</span></div>
+            <p class="p-desc">全球进出口海关+检验检疫法规 · 产品标准 + WTO SPS/TBT 通报的统一知识库 · 法规 3082 条</p>
+            <p class="p-tech">Python · FastAPI · PostgreSQL tsvector</p>
+            <span class="p-link">进入平台 →</span>
+          </a>
+          <a class="p-card" href="http://localhost:8780" target="_blank" rel="noopener">
+            <div class="p-top"><span class="chip chip-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="4.5" width="17" height="15" rx="2"/><path d="M3.5 9.5h17M8 4.5v15"/><path d="M12 13h4M12 16h4" stroke-linecap="round"/></svg></span><div class="p-meta"><b>海关数据基础参数库</b><span class="port">:8780</span></div><span class="status on">运行中</span></div>
+            <p class="p-desc">税则查询 + 监管证件代码表 —— 进出口税则 2026（8972 条）+ 36 种监管证件</p>
+            <p class="p-tech">Python · FastAPI · SQLite</p>
+            <span class="p-link">进入平台 →</span>
+          </a>
+          <a class="p-card" href="http://localhost:8600" target="_blank" rel="noopener">
+            <div class="p-top"><span class="chip chip-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4.5 19.5V5a1.5 1.5 0 011.5-1.5h12A1.5 1.5 0 0119.5 5v14.5" stroke-linecap="round"/><path d="M8 8h8M8 11.5h8M8 15h5" stroke-linecap="round"/></svg></span><div class="p-meta"><b>贸易管制清单库</b><span class="port">:8600</span></div><span class="status on">运行中</span></div>
+            <p class="p-desc">486 条两用物项 · 主要厂商 · 代表型号 · 布控表达式（关键词/排除词/型号正则）</p>
+            <p class="p-tech">Python · Flask · 纯静态 HTML/JS</p>
+            <span class="p-link">进入平台 →</span>
+          </a>
+          <a class="p-card" href="http://localhost:8150" target="_blank" rel="noopener">
+            <div class="p-top"><span class="chip chip-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><ellipse cx="12" cy="5.8" rx="7.5" ry="2.8"/><path d="M4.5 5.8v12.4c0 1.5 3.4 2.8 7.5 2.8s7.5-1.3 7.5-2.8V5.8M4.5 12c0 1.5 3.4 2.8 7.5 2.8s7.5-1.3 7.5-2.8"/></svg></span><div class="p-meta"><b>UN Comtrade 数据</b><span class="port">:8150</span></div><span class="status on">运行中</span></div>
+            <p class="p-desc">UN Comtrade 数据拉取服务 —— 任务提交 + 工作日志 + 写入 PG</p>
+            <p class="p-tech">Python · FastAPI · SQLite · psycopg2</p>
+            <span class="p-link">进入平台 →</span>
+          </a>
+          <a class="p-card" href="http://localhost:9201" target="_blank" rel="noopener">
+            <div class="p-top"><span class="chip chip-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3.5h12l2.5 4.5L12 20.5 3.5 8 6 3.5z" stroke-linejoin="round"/><path d="M3.5 8h17M9.5 8L12 20.5 14.5 8M9.5 8L12 3.5 14.5 8" stroke-linejoin="round"/></svg></span><div class="p-meta"><b>国际商品价格库</b><span class="port">:9201</span></div><span class="status off">按需启动</span></div>
+            <p class="p-desc">World Bank Pink Sheet + IMF Primary Commodity Prices · 月度 · USD</p>
+            <p class="p-tech">Python · Flask · PostgreSQL · ECharts</p>
+            <span class="p-link">启动并进入 →</span>
+          </a>
+          <a class="p-card" href="http://localhost:8160" target="_blank" rel="noopener">
+            <div class="p-top"><span class="chip chip-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3.5 17c2-1.5 4-1.5 6 0s4 1.5 6 0 3.5-1.2 5 0" stroke-linecap="round"/><path d="M6 14l1-7h10l1 7M12 7V3.5M9.5 3.5h5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div class="p-meta"><b>AIS 船舶轨迹数据面板</b><span class="port">:8160</span></div><span class="status off">按需启动</span></div>
+            <p class="p-desc">AIS 船舶轨迹采集查看 —— 香港/新加坡分拨记录 + 申报目的港</p>
+            <p class="p-tech">Python · FastAPI · SQLite · Leaflet</p>
+            <span class="p-link">启动并进入 →</span>
+          </a>
+          <a class="p-card" href="http://localhost:8500" target="_blank" rel="noopener">
+            <div class="p-top"><span class="chip chip-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6.5 3.5h11v17l-5.5-3-5.5 3v-17z" stroke-linejoin="round"/></svg></span><div class="p-meta"><b>海关历史案件信息库</b><span class="port">:8500</span></div><span class="status on">运行中</span></div>
+            <p class="p-desc">海关走私案件风险情报系统 —— 可持续采集 + LLM 抽取 + 风险预测</p>
+            <p class="p-tech">Python · FastAPI · DrissionPage · APScheduler</p>
+            <span class="p-link">进入平台 →</span>
+          </a>
+          <a class="p-card" href="http://localhost:8158" target="_blank" rel="noopener">
+            <div class="p-top"><span class="chip chip-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3.5v9m0 0l-3.5-3.5M12 12.5l3.5-3.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M4.5 15.5v3a2 2 0 002 2h11a2 2 0 002-2v-3" stroke-linecap="round"/></svg></span><div class="p-meta"><b>全球贸易数据汇集</b><span class="port">:8158</span></div><span class="status on">运行中</span></div>
+            <p class="p-desc">8 个免费贸易数据源全部生产化入库 —— 调研报告 + 7 张图表 + 源详情弹窗</p>
+            <p class="p-tech">Python · FastAPI · SQLite · ECharts</p>
+            <span class="p-link">进入平台 →</span>
+          </a>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- ========== 首页 Hero（架构图简介） ========== -->
+    <section class="hero" id="heroSection">
       <div class="hero-badge"><span class="pulse"></span>17 个接入平台 · 11 个运行中</div>
-      <h1>中国海关智能风控<br /><em>多智能体协同平台</em></h1>
-      <p class="hero-sub">出口管制 · 贸易情报 · 风险布控 —— 海关主题数据与风控智能体的统一入口</p>
+      <h1>中国海关智慧风控<br /><em>多智能体协同平台</em></h1>
+      <p class="hero-sub">推进 AI+基础 与 AI+业务 实践应用，构建 感知—分析—推理—洞察—反馈 的群体智能作业闭环</p>
       <div class="hero-stats">
         <div class="stat"><b>17</b><span>接入平台</span></div>
         <div class="stat"><b>11</b><span>运行中</span></div>
-        <div class="stat"><b>6</b><span>按需启动</span></div>
-        <div class="stat"><b>4</b><span>分类</span></div>
-      </div>
-    </section>
-
-    <!-- AI+业务 · 智能体 -->
-    <section class="platform-section">
-      <div class="section-title">
-        <span class="section-bar bar-indigo"></span>
-        <h2>AI+业务 · 智能体</h2>
-      </div>
-      <div class="card-grid cols-3">
-        <a class="p-card" href="http://localhost:8502" target="_blank" rel="noopener">
-          <div class="p-top"><span class="chip chip-indigo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l7 3.5v5c0 4.4-3 8.4-7 9.5-4-1.1-7-5.1-7-9.5v-5L12 3z" stroke-linejoin="round"/><path d="M9.5 12l1.8 1.8 3.4-3.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div class="p-meta"><b>海关风险识别智能体</b><span class="port">:8502</span></div><span class="status on">运行中</span></div>
-          <p class="p-desc">Customs Intel 事件驱动智能体 —— 自动爬取 × 跨源串联 × LLM 调查员 × 主动通知</p>
-          <p class="p-tech">Python · FastAPI · APScheduler · SQLite</p>
-          <span class="p-link">进入平台 →</span>
-        </a>
-        <a class="p-card" href="http://localhost:8190" target="_blank" rel="noopener">
-          <div class="p-top"><span class="chip chip-indigo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-3.8-3.8M8.5 11h5M11 8.5v5" stroke-linecap="round"/></svg></span><div class="p-meta"><b>海关「以案找案」风险分析</b><span class="port">:8190</span></div><span class="status on">运行中</span></div>
-          <p class="p-desc">总入口 risk-hub · 输入线索→案例比对→3 分流 · 连接模式专项（当前【转口走私研判】已上线，其它敬请期待）</p>
-          <p class="p-tech">Vue 3 · Element Plus · vue-router(hash) · axios</p>
-          <span class="p-link">进入平台 →</span>
-        </a>
-        <a class="p-card" href="http://localhost:8173" target="_blank" rel="noopener">
-          <div class="p-top"><span class="chip chip-indigo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 4v4m0 8v4M4 12h4m8 0h4" stroke-linecap="round"/><circle cx="12" cy="12" r="3.2"/></svg></span><div class="p-meta"><b>风险特征提取智能体</b><span class="port">:8173</span></div><span class="status off">按需启动</span></div>
-          <p class="p-desc">以案打策前端 —— Vue 3 + Element Plus SPA · 风险特征要素提取与结构化</p>
-          <p class="p-tech">Vue 3 · Element Plus · vue-router(hash) · axios</p>
-          <span class="p-link">启动并进入 →</span>
-        </a>
-      </div>
-    </section>
-
-    <!-- AI+业务 · 专题监控平台 -->
-    <section class="platform-section">
-      <div class="section-title">
-        <span class="section-bar bar-amber"></span>
-        <h2>AI+业务 · 专题监控平台</h2>
-      </div>
-      <div class="card-grid cols-3">
-        <a class="p-card" href="http://localhost:8300" target="_blank" rel="noopener">
-          <div class="p-top"><span class="chip chip-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3.5v17M5 7.5l7-4 7 4M5 7.5v6c0 3 3 5.5 7 7 4-1.5 7-4 7-7v-6" stroke-linejoin="round"/></svg></span><div class="p-meta"><b>反制措施监控平台</b><span class="port">:8300</span></div><span class="status on">运行中</span></div>
-          <p class="p-desc">反制关税 · 不可靠实体清单 · 出口管制管控关注名单 · 执法案例</p>
-          <p class="p-tech">Python · Flask · ECharts · 8500 案件库代理</p>
-          <span class="p-link">进入平台 →</span>
-        </a>
-        <a class="p-card" href="http://localhost:8100" target="_blank" rel="noopener">
-          <div class="p-top"><span class="chip chip-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3.5 12h17M12 3.5v17" stroke-linecap="round"/><circle cx="12" cy="12" r="8.5"/></svg></span><div class="p-meta"><b>出口管制监控平台</b><span class="port">:8100</span></div><span class="status on">运行中</span></div>
-          <p class="p-desc">出口管制监控平台 —— 战略矿产 + UN Comtrade 镜像分析</p>
-          <p class="p-tech">Python · Flask · PostgreSQL · ECharts</p>
-          <span class="p-link">进入平台 →</span>
-        </a>
-        <a class="p-card" href="http://localhost:8200" target="_blank" rel="noopener">
-          <div class="p-top"><span class="chip chip-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3z" stroke-linejoin="round"/><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5" stroke-linejoin="round"/></svg></span><div class="p-meta"><b>两用物项监控平台</b><span class="port">:8200</span></div><span class="status on">运行中</span></div>
-          <p class="p-desc">商务部 2024 年第 51 号公告 · 许可证制度 · 终端用户审查 · 执法案例</p>
-          <p class="p-tech">Python · Flask · ECharts · 8500 案件库代理</p>
-          <span class="p-link">进入平台 →</span>
-        </a>
-        <a class="p-card" href="http://localhost:8560" target="_blank" rel="noopener">
-          <div class="p-top"><span class="chip chip-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 20.5c-2-2.2-3-5-3-7.5C4 7.5 8.5 3.5 20 3.5c0 11.5-4 16-9.5 16-1.2 0-2.4-.3-3.5-1z" stroke-linejoin="round"/><path d="M7 20.5C9 14 12 10 17 6.5" stroke-linecap="round"/></svg></span><div class="p-meta"><b>化肥贸易监控平台</b><span class="port">:8560</span></div><span class="status off">按需启动</span></div>
-          <p class="p-desc">全球化肥 HS 3101-3105 进出口贸易数据分析 · 氮磷钾复合肥 · UN Comtrade</p>
-          <p class="p-tech">Python · FastAPI · psycopg2 · ECharts</p>
-          <span class="p-link">启动并进入 →</span>
-        </a>
-        <a class="p-card" href="http://localhost:8508" target="_blank" rel="noopener">
-          <div class="p-top"><span class="chip chip-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7.5l8-4 8 4-8 4-8-4z" stroke-linejoin="round"/><path d="M4 7.5v9l8 4 8-4v-9M12 11.5v9" stroke-linejoin="round"/></svg></span><div class="p-meta"><b>固体废物监控平台</b><span class="port">:8508</span></div><span class="status off">按需启动</span></div>
-          <p class="p-desc">中国海关固体废物监管法规库 · 政策演变时间轴 · 再生原料进口路径</p>
-          <p class="p-tech">Python · Flask · ECharts · 纯静态 HTML</p>
-          <span class="p-link">启动并进入 →</span>
-        </a>
-      </div>
-    </section>
-
-    <!-- AI+基础 · 标准 -->
-    <section class="platform-section">
-      <div class="section-title">
-        <span class="section-bar bar-violet"></span>
-        <h2>AI+基础 · 标准</h2>
-      </div>
-      <div class="card-grid cols-3">
-        <a class="p-card" href="http://localhost:8289" target="_blank" rel="noopener">
-          <div class="p-top"><span class="chip chip-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3.5L4 6.8v10.4l8 3.3 8-3.3V6.8L12 3.5z" stroke-linejoin="round"/><path d="M12 8v5M12 16.2v.3" stroke-linecap="round"/></svg></span><div class="p-meta"><b>全球海关法规标准库</b><span class="port">:8289</span></div><span class="status on">运行中</span></div>
-          <p class="p-desc">全球进出口海关+检验检疫法规 · 产品标准 + WTO SPS/TBT 通报的统一知识库 · 法规 3082 条</p>
-          <p class="p-tech">Python · FastAPI · PostgreSQL tsvector 全文检索</p>
-          <span class="p-link">进入平台 →</span>
-        </a>
-        <a class="p-card" href="http://localhost:8780" target="_blank" rel="noopener">
-          <div class="p-top"><span class="chip chip-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="4.5" width="17" height="15" rx="2"/><path d="M3.5 9.5h17M8 4.5v15"/><path d="M12 13h4M12 16h4" stroke-linecap="round"/></svg></span><div class="p-meta"><b>海关数据基础参数库</b><span class="port">:8780</span></div><span class="status on">运行中</span></div>
-          <p class="p-desc">税则查询 + 监管证件代码表 —— 进出口税则 2026（8972 条）+ 36 种监管证件</p>
-          <p class="p-tech">Python · FastAPI · SQLite · 纯静态 HTML/JS</p>
-          <span class="p-link">进入平台 →</span>
-        </a>
-        <a class="p-card" href="http://localhost:8600" target="_blank" rel="noopener">
-          <div class="p-top"><span class="chip chip-violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4.5 19.5V5a1.5 1.5 0 011.5-1.5h12A1.5 1.5 0 0119.5 5v14.5" stroke-linecap="round"/><path d="M8 8h8M8 11.5h8M8 15h5" stroke-linecap="round"/></svg></span><div class="p-meta"><b>贸易管制专题库</b><span class="port">:8600</span></div><span class="status on">运行中</span></div>
-          <p class="p-desc">486 条两用物项 · 主要厂商 · 代表型号 · 布控表达式（关键词/排除词/型号正则）</p>
-          <p class="p-tech">Python · Flask · 纯静态 HTML/JS</p>
-          <span class="p-link">进入平台 →</span>
-        </a>
-      </div>
-    </section>
-
-    <!-- AI+基础 · 数据 -->
-    <section class="platform-section">
-      <div class="section-title">
-        <span class="section-bar bar-emerald"></span>
-        <h2>AI+基础 · 数据</h2>
-      </div>
-      <div class="card-grid cols-3">
-        <a class="p-card" href="http://localhost:8150" target="_blank" rel="noopener">
-          <div class="p-top"><span class="chip chip-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><ellipse cx="12" cy="5.8" rx="7.5" ry="2.8"/><path d="M4.5 5.8v12.4c0 1.5 3.4 2.8 7.5 2.8s7.5-1.3 7.5-2.8V5.8M4.5 12c0 1.5 3.4 2.8 7.5 2.8s7.5-1.3 7.5-2.8"/></svg></span><div class="p-meta"><b>UN Comtrade 数据拉取中心</b><span class="port">:8150</span></div><span class="status on">运行中</span></div>
-          <p class="p-desc">UN Comtrade 数据拉取服务 —— 任务提交 + 工作日志 + 写入 PG</p>
-          <p class="p-tech">Python · FastAPI · SQLite（任务日志）· psycopg2</p>
-          <span class="p-link">进入平台 →</span>
-        </a>
-        <a class="p-card" href="http://localhost:9201" target="_blank" rel="noopener">
-          <div class="p-top"><span class="chip chip-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3.5h12l2.5 4.5L12 20.5 3.5 8 6 3.5z" stroke-linejoin="round"/><path d="M3.5 8h17M9.5 8L12 20.5 14.5 8M9.5 8L12 3.5 14.5 8" stroke-linejoin="round"/></svg></span><div class="p-meta"><b>国际商品价格库</b><span class="port">:9201</span></div><span class="status off">按需启动</span></div>
-          <p class="p-desc">World Bank Pink Sheet + IMF Primary Commodity Prices · 月度 · USD</p>
-          <p class="p-tech">Python · Flask · PostgreSQL · ECharts</p>
-          <span class="p-link">启动并进入 →</span>
-        </a>
-        <a class="p-card" href="http://localhost:8180" target="_blank" rel="noopener">
-          <div class="p-top"><span class="chip chip-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6a2 2 0 012-2h12a2 2 0 012 2v8a2 2 0 01-2 2H9l-5 4V6z" stroke-linejoin="round"/><path d="M8 9h8M8 12.5h5" stroke-linecap="round"/></svg></span><div class="p-meta"><b>海关风险舆情信息解析库</b><span class="port">:8180</span></div><span class="status off">按需启动</span></div>
-          <p class="p-desc">实时聚合新闻媒体与行业舆情中的海关风险报道 —— 自动风险分类 + 等级标注 + 看板查询</p>
-          <p class="p-tech">Python · FastAPI · feedparser · jieba · APScheduler</p>
-          <span class="p-link">启动并进入 →</span>
-        </a>
-        <a class="p-card" href="http://localhost:8500" target="_blank" rel="noopener">
-          <div class="p-top"><span class="chip chip-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6.5 3.5h11v17l-5.5-3-5.5 3v-17z" stroke-linejoin="round"/></svg></span><div class="p-meta"><b>海关历史案件信息解析库</b><span class="port">:8500</span></div><span class="status on">运行中</span></div>
-          <p class="p-desc">海关走私案件风险情报系统 —— 可持续采集 + LLM 抽取 + 风险预测</p>
-          <p class="p-tech">Python · FastAPI · DrissionPage · APScheduler</p>
-          <span class="p-link">进入平台 →</span>
-        </a>
-        <a class="p-card" href="http://localhost:8158" target="_blank" rel="noopener">
-          <div class="p-top"><span class="chip chip-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3.5v9m0 0l-3.5-3.5M12 12.5l3.5-3.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M4.5 15.5v3a2 2 0 002 2h11a2 2 0 002-2v-3" stroke-linecap="round"/></svg></span><div class="p-meta"><b>全球贸易数据调取渠道</b><span class="port">:8158</span></div><span class="status on">运行中</span></div>
-          <p class="p-desc">8 个免费贸易数据源全部生产化入库 —— 调研报告 + 7 张图表 + 源详情弹窗</p>
-          <p class="p-tech">Python · FastAPI · SQLite · ECharts</p>
-          <span class="p-link">进入平台 →</span>
-        </a>
-        <a class="p-card" href="http://localhost:8160" target="_blank" rel="noopener">
-          <div class="p-top"><span class="chip chip-emerald"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3.5 17c2-1.5 4-1.5 6 0s4 1.5 6 0 3.5-1.2 5 0" stroke-linecap="round"/><path d="M6 14l1-7h10l1 7M12 7V3.5M9.5 3.5h5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div class="p-meta"><b>AIS 船舶轨迹数据面板</b><span class="port">:8160</span></div><span class="status off">按需启动</span></div>
-          <p class="p-desc">AIS 船舶轨迹采集查看 —— 香港/新加坡分拨记录 + 申报目的港</p>
-          <p class="p-tech">Python · FastAPI · SQLite · Leaflet</p>
-          <span class="p-link">启动并进入 →</span>
-        </a>
       </div>
     </section>
 
     <footer class="site-footer">
-      <p>数据实时取自 Dev Dashboard 服务目录 · 点击卡片进入对应平台（按需服务会自动拉起）</p>
+      <p>以总署知识库平台为主体底座，打造服务风控条线的本地知识库 · 构建自动化协同处理能力</p>
     </footer>
   </main>
 
