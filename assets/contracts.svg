@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" fill="none" role="img" aria-labelledby="title desc"><title id="title">全球中标合同情报</title><desc id="desc">展开的白色合同与精密地球轨道相互连接，翡翠成交印记突出全球采购机会和交易结果。</desc><defs>
+  <linearGradient id="jade" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#32b18b"/><stop offset=".47" stop-color="#007e5a"/><stop offset="1" stop-color="#004a36"/></linearGradient>
+  <linearGradient id="jadeSide" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#007b57"/><stop offset="1" stop-color="#003d2e"/></linearGradient>
+  <linearGradient id="mint" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f3fff9"/><stop offset=".46" stop-color="#cce9db"/><stop offset="1" stop-color="#8ebcaa"/></linearGradient>
+  <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f9fffc" stop-opacity=".96"/><stop offset=".36" stop-color="#e0f5e9" stop-opacity=".76"/><stop offset=".73" stop-color="#98c7b3" stop-opacity=".38"/><stop offset="1" stop-color="#3a9c7a" stop-opacity=".72"/></linearGradient>
+  <linearGradient id="glassGreen" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#9fe0bd" stop-opacity=".95"/><stop offset=".48" stop-color="#3ca982" stop-opacity=".77"/><stop offset="1" stop-color="#00664b" stop-opacity=".94"/></linearGradient>
+  <linearGradient id="paper" x1="0" y1="0" x2=".85" y2="1"><stop stop-color="#fff"/><stop offset=".58" stop-color="#f9fbfa"/><stop offset="1" stop-color="#dce6e1"/></linearGradient>
+  <linearGradient id="silver" x1="0" y1="0" x2="1" y2=".85"><stop stop-color="#fff"/><stop offset=".18" stop-color="#d6dedb"/><stop offset=".39" stop-color="#fafcfb"/><stop offset=".64" stop-color="#b9c9c1"/><stop offset=".82" stop-color="#eff4f1"/><stop offset="1" stop-color="#99b0a4"/></linearGradient>
+  <linearGradient id="charcoal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#61766c"/><stop offset=".45" stop-color="#263d32"/><stop offset="1" stop-color="#11261b"/></linearGradient>
+  <linearGradient id="orange" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffd4ba"/><stop offset=".42" stop-color="#f49666"/><stop offset="1" stop-color="#dc6438"/></linearGradient>
+  <linearGradient id="orangeGlass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffdec9" stop-opacity=".95"/><stop offset=".6" stop-color="#f39465" stop-opacity=".8"/><stop offset="1" stop-color="#d9683c" stop-opacity=".96"/></linearGradient>
+  <linearGradient id="ribbon" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#c9efda"/><stop offset=".48" stop-color="#45ac84"/><stop offset="1" stop-color="#006c50"/></linearGradient>
+  <linearGradient id="line" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#aecbbc" stop-opacity="0"/><stop offset=".25" stop-color="#93bca9"/><stop offset=".8" stop-color="#5eaa89"/><stop offset="1" stop-color="#9bcbb3" stop-opacity="0"/></linearGradient>
+  <radialGradient id="globe"><stop stop-color="#fbfefc"/><stop offset=".65" stop-color="#eaf1ed"/><stop offset="1" stop-color="#b5c8bd"/></radialGradient>
+  <radialGradient id="glow"><stop stop-color="#e8f6ed" stop-opacity=".65"/><stop offset="1" stop-color="#e8f6ed" stop-opacity="0"/></radialGradient>
+  <filter id="shadow" x="-30%" y="-40%" width="160%" height="200%"><feDropShadow dx="0" dy="16" stdDeviation="17" flood-color="#164a33" flood-opacity=".12"/></filter>
+  <filter id="softshadow" x="-30%" y="-40%" width="160%" height="200%"><feDropShadow dx="0" dy="7" stdDeviation="8" flood-color="#143e2c" flood-opacity=".12"/></filter>
+  <filter id="blur" x="-50%" y="-100%" width="200%" height="300%"><feGaussianBlur stdDeviation="16"/></filter>
+</defs><ellipse cx="605" cy="576" rx="338" ry="22" fill="#174c33" opacity="0.12" filter="url(#blur)"/><g transform="rotate(-17 393 289)" filter="url(#softshadow)"><g opacity="1"><circle cx="393" cy="289" r="159" fill="url(#globe)" stroke="#b2c7ba" stroke-width="1.2"/>
+    <ellipse cx="393" cy="289" rx="108.12" ry="159" stroke="#a5c2b0" stroke-width="1.2"/>
+    <ellipse cx="393" cy="289" rx="47.699999999999996" ry="159" stroke="#a5c2b0" stroke-width="1.2"/>
+    <ellipse cx="393" cy="289" rx="159" ry="57.239999999999995" stroke="#a5c2b0" stroke-width="1.2"/>
+    <ellipse cx="393" cy="289" rx="141.51" ry="38.16" transform="translate(0 -73.14)" stroke="#b0cabb" stroke-width="1.2"/>
+    <ellipse cx="393" cy="289" rx="141.51" ry="38.16" transform="translate(0 73.14)" stroke="#a5c2b0" stroke-width="1.2"/>
+    <path d="M234 289H552M393 130V448" stroke="#8dae9b" stroke-width="1.2"/>
+    <path d="M281.7 198.37Q358.02 133.18 450.24 158.62" stroke="white" stroke-width="4" opacity=".8" stroke-linecap="round"/></g></g>
+<path d="M235 349C155 281 260 172 437 159S754 264 890 375" stroke="#a4cbb2" stroke-width="1.7"/>
+<g transform="translate(497 145) rotate(9)" filter="url(#shadow)">
+<path d="M-9 17H256Q280 18 280 42V364Q279 392 251 397H-8Z" fill="#bbd1c3" stroke="#9ab9a6"/>
+<path d="M0 0H221L273 52V363Q273 382 254 382H0Z" fill="url(#paper)" stroke="#ccded2" stroke-width="1.5"/>
+<path d="M221 0V40Q221 52 233 52H273" fill="#e1ece4" stroke="#c0d5c7" stroke-width="1.5"/>
+<path d="M30 39H115" stroke="#006c50" stroke-width="7" stroke-linecap="round"/>
+<path d="M30 71H191M30 88H232M30 105H205" stroke="#afc6b6" stroke-width="3.5" stroke-linecap="round"/>
+<path d="M30 142H232M30 165H232M30 188H232M30 211H232M30 234H232" stroke="#c8d9cd" stroke-width="1.3"/>
+<path d="M114 142V234M179 142V234" stroke="#c8d9cd" stroke-width="1.3"/>
+<path d="M40 154H92M126 154H160M190 154H216M40 178H96M126 178H151M190 178H219M40 201H87M126 201H163M190 201H216M40 224H99M126 224H156M190 224H219" stroke="#97b59f" stroke-width="2.2" stroke-linecap="round"/>
+<path d="M31 295C50 256 55 320 70 288S87 311 102 283S122 302 134 286" stroke="#719f81" stroke-width="2" stroke-linecap="round"/>
+<path d="M31 316H129M31 334H92" stroke="#bacfbe" stroke-width="3" stroke-linecap="round"/>
+</g>
+<g transform="translate(779 478) rotate(9)" filter="url(#softshadow)">
+<path d="M-48 30L-47 112L-18 90L2 112L11 33" fill="url(#mint)" stroke="#b2d2bd"/>
+<path d="M5 30L13 112L36 90L67 109L61 26" fill="url(#glassGreen)" stroke="#9fcaad"/>
+<circle r="66" fill="url(#jade)" stroke="#9bd5b2" stroke-width="3"/>
+<circle r="54" stroke="#bee4cb" stroke-width="1.4"/>
+<path d="M-27 0L-7 20L30 -24" stroke="#f1fff5" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<path d="M890 375C1001 519 660 595 416 502C316 465 272 404 235 349" stroke="url(#orange)" stroke-width="3" stroke-linecap="round"/>
+<circle cx="396" cy="493" r="8" fill="url(#orange)" stroke="#f8fffb" stroke-width="2"/><circle cx="866" cy="361" r="7" fill="url(#jade)" stroke="#f8fffb" stroke-width="2"/><g transform="translate(866 246) rotate(-13)"><path d="M-29 -14L15 -32L40 7L-4 25Z" fill="url(#silver)" stroke="#bbd4c3"/><path d="M-14 -10L9 -20M-7 0L16 -10" stroke="#83a990" stroke-width="2"/></g>
+</svg>

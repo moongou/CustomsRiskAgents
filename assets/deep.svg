@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" fill="none" role="img" aria-labelledby="title desc"><title id="title">深度研究平台</title><desc id="desc">层层展开的白色书页像扇面向上生长，连接成清晰的知识树，让证据汇入完整而深入的研究。</desc><defs>
+  <linearGradient id="jade" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#32b18b"/><stop offset=".47" stop-color="#007e5a"/><stop offset="1" stop-color="#004a36"/></linearGradient>
+  <linearGradient id="jadeSide" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#007b57"/><stop offset="1" stop-color="#003d2e"/></linearGradient>
+  <linearGradient id="mint" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f3fff9"/><stop offset=".46" stop-color="#cce9db"/><stop offset="1" stop-color="#8ebcaa"/></linearGradient>
+  <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f9fffc" stop-opacity=".96"/><stop offset=".36" stop-color="#e0f5e9" stop-opacity=".76"/><stop offset=".73" stop-color="#98c7b3" stop-opacity=".38"/><stop offset="1" stop-color="#3a9c7a" stop-opacity=".72"/></linearGradient>
+  <linearGradient id="glassGreen" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#9fe0bd" stop-opacity=".95"/><stop offset=".48" stop-color="#3ca982" stop-opacity=".77"/><stop offset="1" stop-color="#00664b" stop-opacity=".94"/></linearGradient>
+  <linearGradient id="paper" x1="0" y1="0" x2=".85" y2="1"><stop stop-color="#fff"/><stop offset=".58" stop-color="#f9fbfa"/><stop offset="1" stop-color="#dce6e1"/></linearGradient>
+  <linearGradient id="silver" x1="0" y1="0" x2="1" y2=".85"><stop stop-color="#fff"/><stop offset=".18" stop-color="#d6dedb"/><stop offset=".39" stop-color="#fafcfb"/><stop offset=".64" stop-color="#b9c9c1"/><stop offset=".82" stop-color="#eff4f1"/><stop offset="1" stop-color="#99b0a4"/></linearGradient>
+  <linearGradient id="charcoal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#61766c"/><stop offset=".45" stop-color="#263d32"/><stop offset="1" stop-color="#11261b"/></linearGradient>
+  <linearGradient id="orange" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffd4ba"/><stop offset=".42" stop-color="#f49666"/><stop offset="1" stop-color="#dc6438"/></linearGradient>
+  <linearGradient id="orangeGlass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffdec9" stop-opacity=".95"/><stop offset=".6" stop-color="#f39465" stop-opacity=".8"/><stop offset="1" stop-color="#d9683c" stop-opacity=".96"/></linearGradient>
+  <linearGradient id="ribbon" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#c9efda"/><stop offset=".48" stop-color="#45ac84"/><stop offset="1" stop-color="#006c50"/></linearGradient>
+  <linearGradient id="line" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#aecbbc" stop-opacity="0"/><stop offset=".25" stop-color="#93bca9"/><stop offset=".8" stop-color="#5eaa89"/><stop offset="1" stop-color="#9bcbb3" stop-opacity="0"/></linearGradient>
+  <radialGradient id="globe"><stop stop-color="#fbfefc"/><stop offset=".65" stop-color="#eaf1ed"/><stop offset="1" stop-color="#b5c8bd"/></radialGradient>
+  <radialGradient id="glow"><stop stop-color="#e8f6ed" stop-opacity=".65"/><stop offset="1" stop-color="#e8f6ed" stop-opacity="0"/></radialGradient>
+  <filter id="shadow" x="-30%" y="-40%" width="160%" height="200%"><feDropShadow dx="0" dy="16" stdDeviation="17" flood-color="#164a33" flood-opacity=".12"/></filter>
+  <filter id="softshadow" x="-30%" y="-40%" width="160%" height="200%"><feDropShadow dx="0" dy="7" stdDeviation="8" flood-color="#143e2c" flood-opacity=".12"/></filter>
+  <filter id="blur" x="-50%" y="-100%" width="200%" height="300%"><feGaussianBlur stdDeviation="16"/></filter>
+</defs><ellipse cx="606" cy="575" rx="351" ry="21" fill="#174c33" opacity="0.12" filter="url(#blur)"/><g filter="url(#shadow)">
+<path d="M251 401Q429 348 592 440Q746 348 943 402L925 544Q747 510 599 597Q437 516 271 545Z" fill="url(#jadeSide)" stroke="#3a8962" stroke-width="1.7"/>
+<path d="M270 387Q431 347 592 427Q751 344 925 386L908 525Q750 486 599 577Q438 496 287 526Z" fill="#d7e6db" stroke="#b2cdbb" stroke-width="1.6"/>
+<path d="M280 362Q447 342 592 413Q741 330 915 360L903 512Q748 471 599 563Q438 485 293 512Z" fill="url(#paper)" stroke="#c4d9cb" stroke-width="1.5"/>
+<path d="M320 318Q481 314 592 397Q700 305 876 310L891 496Q729 450 599 550Q459 465 308 495Z" fill="url(#paper)" stroke="#c7ddce" stroke-width="1.5"/>
+<path d="M365 268Q507 288 592 383Q677 277 821 264L871 481Q730 426 599 539Q477 443 329 481Z" fill="url(#paper)" stroke="#c8ddce" stroke-width="1.5"/>
+<path d="M418 224Q536 263 592 368Q640 254 768 224L838 464Q713 413 599 528Q502 425 358 464Z" fill="url(#paper)" stroke="#c9ded0" stroke-width="1.5"/>
+<path d="M474 206Q558 263 592 353Q624 256 711 205L799 447Q686 405 599 516Q514 409 395 447Z" fill="url(#paper)" stroke="#c9ded0" stroke-width="1.5"/>
+<path d="M592 353L599 516" stroke="#a8c9b3" stroke-width="2"/>
+<path d="M468 314Q514 332 541 369M456 334Q505 351 535 391M715 316Q669 335 649 371M724 337Q678 356 655 393" stroke="#bed7c6" stroke-width="2" stroke-linecap="round"/>
+</g>
+<path d="M595 303V214M595 236L493 181L403 185M595 236L699 172L800 185M493 181L471 127M699 172L721 114M595 214L578 126" stroke="#79aa8b" stroke-width="2.1" stroke-linecap="round"/>
+<path d="M493 181L528 153M699 172L665 139" stroke="#b0ceba" stroke-width="1.4"/>
+<circle cx="595" cy="302" r="10" fill="url(#jade)" stroke="#f8fffb" stroke-width="2"/><circle cx="493" cy="181" r="13" fill="url(#jade)" stroke="#f8fffb" stroke-width="2"/><circle cx="699" cy="172" r="13" fill="url(#jade)" stroke="#f8fffb" stroke-width="2"/><circle cx="403" cy="185" r="10" fill="url(#orange)" stroke="#f8fffb" stroke-width="2"/><circle cx="800" cy="185" r="10" fill="url(#jade)" stroke="#f8fffb" stroke-width="2"/><circle cx="471" cy="127" r="8" fill="url(#jade)" stroke="#f8fffb" stroke-width="2"/><circle cx="721" cy="114" r="8" fill="url(#orange)" stroke="#f8fffb" stroke-width="2"/><circle cx="578" cy="126" r="10" fill="url(#jade)" stroke="#f8fffb" stroke-width="2"/><circle cx="528" cy="153" r="5" fill="url(#jade)" stroke="#f8fffb" stroke-width="2"/><circle cx="665" cy="139" r="5" fill="url(#jade)" stroke="#f8fffb" stroke-width="2"/><path d="M233 337L267 342M947 330L979 322" stroke="#bad3c1" stroke-width="2" stroke-linecap="round"/>
+</svg>

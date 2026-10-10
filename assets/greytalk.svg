@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" fill="none" role="img" aria-labelledby="title desc"><title id="title">灰话舆情平台</title><desc id="desc">精密透明雷达扫描开放对话，立体引号与语言波形悬于雷达之上，将分散讨论转化为可追溯的发现信号。</desc><defs>
+  <linearGradient id="jade" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#32b18b"/><stop offset=".47" stop-color="#007e5a"/><stop offset="1" stop-color="#004a36"/></linearGradient>
+  <linearGradient id="jadeSide" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#007b57"/><stop offset="1" stop-color="#003d2e"/></linearGradient>
+  <linearGradient id="mint" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f3fff9"/><stop offset=".46" stop-color="#cce9db"/><stop offset="1" stop-color="#8ebcaa"/></linearGradient>
+  <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f9fffc" stop-opacity=".96"/><stop offset=".36" stop-color="#e0f5e9" stop-opacity=".76"/><stop offset=".73" stop-color="#98c7b3" stop-opacity=".38"/><stop offset="1" stop-color="#3a9c7a" stop-opacity=".72"/></linearGradient>
+  <linearGradient id="glassGreen" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#9fe0bd" stop-opacity=".95"/><stop offset=".48" stop-color="#3ca982" stop-opacity=".77"/><stop offset="1" stop-color="#00664b" stop-opacity=".94"/></linearGradient>
+  <linearGradient id="paper" x1="0" y1="0" x2=".85" y2="1"><stop stop-color="#fff"/><stop offset=".58" stop-color="#f9fbfa"/><stop offset="1" stop-color="#dce6e1"/></linearGradient>
+  <linearGradient id="silver" x1="0" y1="0" x2="1" y2=".85"><stop stop-color="#fff"/><stop offset=".18" stop-color="#d6dedb"/><stop offset=".39" stop-color="#fafcfb"/><stop offset=".64" stop-color="#b9c9c1"/><stop offset=".82" stop-color="#eff4f1"/><stop offset="1" stop-color="#99b0a4"/></linearGradient>
+  <linearGradient id="charcoal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#61766c"/><stop offset=".45" stop-color="#263d32"/><stop offset="1" stop-color="#11261b"/></linearGradient>
+  <linearGradient id="orange" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffd4ba"/><stop offset=".42" stop-color="#f49666"/><stop offset="1" stop-color="#dc6438"/></linearGradient>
+  <linearGradient id="orangeGlass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffdec9" stop-opacity=".95"/><stop offset=".6" stop-color="#f39465" stop-opacity=".8"/><stop offset="1" stop-color="#d9683c" stop-opacity=".96"/></linearGradient>
+  <linearGradient id="ribbon" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#c9efda"/><stop offset=".48" stop-color="#45ac84"/><stop offset="1" stop-color="#006c50"/></linearGradient>
+  <linearGradient id="line" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#aecbbc" stop-opacity="0"/><stop offset=".25" stop-color="#93bca9"/><stop offset=".8" stop-color="#5eaa89"/><stop offset="1" stop-color="#9bcbb3" stop-opacity="0"/></linearGradient>
+  <radialGradient id="globe"><stop stop-color="#fbfefc"/><stop offset=".65" stop-color="#eaf1ed"/><stop offset="1" stop-color="#b5c8bd"/></radialGradient>
+  <radialGradient id="glow"><stop stop-color="#e8f6ed" stop-opacity=".65"/><stop offset="1" stop-color="#e8f6ed" stop-opacity="0"/></radialGradient>
+  <filter id="shadow" x="-30%" y="-40%" width="160%" height="200%"><feDropShadow dx="0" dy="16" stdDeviation="17" flood-color="#164a33" flood-opacity=".12"/></filter>
+  <filter id="softshadow" x="-30%" y="-40%" width="160%" height="200%"><feDropShadow dx="0" dy="7" stdDeviation="8" flood-color="#143e2c" flood-opacity=".12"/></filter>
+  <filter id="blur" x="-50%" y="-100%" width="200%" height="300%"><feGaussianBlur stdDeviation="16"/></filter>
+</defs><ellipse cx="600" cy="563" rx="321" ry="23" fill="#174c33" opacity="0.12" filter="url(#blur)"/><g filter="url(#shadow)">
+<path d="M290 429V454C290 522 428 573 600 573S910 522 910 454V429Z" fill="url(#mint)" stroke="#a8c6b4" stroke-width="1.5"/>
+<ellipse cx="600" cy="429" rx="310" ry="112" fill="url(#glass)" stroke="#d2e8dc" stroke-width="2"/>
+<ellipse cx="600" cy="429" rx="265" ry="91" stroke="#80b399" stroke-width="1.4"/>
+<ellipse cx="600" cy="429" rx="201" ry="69" stroke="#7cae92" stroke-width="1.2"/>
+<ellipse cx="600" cy="429" rx="131" ry="45" stroke="#7cae92" stroke-width="1.2"/>
+<ellipse cx="600" cy="429" rx="61" ry="21" stroke="#7cae92" stroke-width="1.2"/>
+<path d="M290 429H910M381 350L819 508M381 508L819 350" stroke="#a7cbb7" stroke-width="1.2"/>
+<path d="M600 429L813 348A310 112 0 0 1 910 429Z" fill="url(#glassGreen)" opacity=".54"/>
+<path d="M600 429L813 348" stroke="#027957" stroke-width="3"/>
+<path d="M322 467C423 549 777 549 878 467" stroke="#fbfffc" stroke-width="3" opacity=".85"/>
+</g>
+<path d="M425 403V238M756 423V215M673 485V325" stroke="#a4c5b0" stroke-width="1.5" stroke-dasharray="4 6"/>
+<g transform="translate(460 219) rotate(-8)" filter="url(#shadow)">
+<path d="M-92 -78Q-107 -78 -107 -61V59Q-107 75 -91 75H41L82 104V75H99Q116 75 116 58V-61Q116 -78 100 -78Z" fill="url(#glass)" stroke="#bcdec9" stroke-width="1.6"/>
+<path d="M-68 -43H-17V7Q-17 49 -58 51V27Q-38 25 -38 10H-68Z" fill="url(#jade)"/>
+<path d="M8 -43H59V7Q59 49 18 51V27Q38 25 38 10H8Z" fill="url(#jade)"/>
+<path d="M-93 -66H97" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+</g>
+<g transform="translate(760 269) rotate(11)" filter="url(#shadow)">
+<path d="M-69 -63Q-83 -63 -83 -48V42Q-83 57 -69 57H-43L-75 89L-9 57H82Q97 57 97 42V-48Q97 -63 82 -63Z" fill="url(#paper)" stroke="#e2d9cd" stroke-width="1.5"/>
+<path d="M-47 0C-30 -26 -12 26 5 0S40 -26 60 0" stroke="url(#orange)" stroke-width="7" stroke-linecap="round"/>
+</g>
+<circle cx="425" cy="403" r="7" fill="url(#jade)" stroke="#f8fffb" stroke-width="2"/><circle cx="756" cy="423" r="10" fill="url(#orange)" stroke="#f8fffb" stroke-width="2"/><circle cx="673" cy="485" r="6" fill="url(#jade)" stroke="#f8fffb" stroke-width="2"/><ellipse cx="756" cy="423" rx="27" ry="10" stroke="#e99466" stroke-width="1.5" opacity=".6"/>
+<path d="M857 175Q923 219 921 286M879 148Q957 202 955 289" stroke="#c9ddd0" stroke-width="2" stroke-linecap="round"/>
+</svg>
